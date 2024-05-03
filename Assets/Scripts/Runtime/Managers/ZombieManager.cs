@@ -37,6 +37,7 @@ public class ZombieManager : MonoBehaviour
 
     private void ChasePlayer()
     {
+        Debug.Log("Chasing Player");
         if (zombieAgent != null)
         {
             zombieAgent.SetDestination(target.position);
@@ -46,16 +47,17 @@ public class ZombieManager : MonoBehaviour
 
     private IEnumerator Attack()
     {
+        print("Attacking");
         isAttacking = true;
         yield return new WaitForSeconds(attackCooldown);
+        //Animasyon oynatılabilir
         if (Vector3.Distance(transform.position, target.position) <= attackRange)
         {
-            // Check if the target is still within attack range
-            // Deal damage to the player
+           
             var playerManager = target.GetComponent<PlayerManager>();
             if (playerManager != null)
             {
-             //   playerManager.TakeDamage(attackDamage);
+                playerManager.TakeDamage(attackDamage);
             }
         }
         isAttacking = false;

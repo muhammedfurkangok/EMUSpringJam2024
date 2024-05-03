@@ -56,4 +56,9 @@ public class PlayerManager : MonoBehaviour
 
         playerRb.velocity = new Vector3(horizontal * speed, playerRb.velocity.y, vertical * speed);
     }
+
+    public void TakeDamage(float attackDamage)
+    {
+        throw new System.NotImplementedException();
+    }
 }
