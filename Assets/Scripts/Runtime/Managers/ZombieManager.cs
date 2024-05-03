@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using Runtime.Interfaces;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ZombieManager : MonoBehaviour
+public class ZombieManager : MonoBehaviour,IZombie
 {
 
     #region Self Variables
@@ -21,13 +24,21 @@ public class ZombieManager : MonoBehaviour
     
     private int currentHealth = 100;
     private int maxHealth = 100;
+    private int ZOMBIE_POOL_SIZE = 100;
+    private Queue <GameObject> zombieQueue = new Queue<GameObject>();
 
     #endregion
  
     #endregion
 
 
+    
     private bool isAttacking = false;
+
+    private void Start()
+    {
+        CreateZombiePool();
+    }
 
     private void Update()
     {
@@ -45,13 +56,13 @@ public class ZombieManager : MonoBehaviour
         }
     }
 
-    private void AttackPlayer()
+    public void AttackPlayer()
     {
         transform.LookAt(target);
         StartCoroutine(Attack());
     }
 
-    private void ChasePlayer()
+    public void ChasePlayer()
     {
         Debug.Log("Chasing Player");
         if (zombieAgent != null)
@@ -90,7 +101,39 @@ public class ZombieManager : MonoBehaviour
 
     private void Die()
     {
-        //animation
-        Destroy(gameObject,2f);
+        ReturnZombieToPool(gameObject);
     }
+
+    #region Object Pooling Methods
+
+    public void CreateZombiePool()
+    {
+        for (int i = 0; i < ZOMBIE_POOL_SIZE; i++)
+        {
+            GameObject zombie = Instantiate(gameObject, Vector3.zero, Quaternion.identity);
+            zombie.SetActive(false);
+            zombieQueue.Enqueue(zombie);
+        }
+    }
+    
+    public GameObject GetZombieFromPool()
+    {
+        if (zombieQueue.Count > 0)
+        {
+            GameObject zombie = zombieQueue.Dequeue();
+            zombie.SetActive(true);
+            return zombie;
+        }
+        return null;
+    }
+    
+    public void ReturnZombieToPool(GameObject zombie)
+    {
+        zombie.SetActive(false);
+        zombieQueue.Enqueue(zombie);
+    }
+    
+
+    
+    #endregion
 }
