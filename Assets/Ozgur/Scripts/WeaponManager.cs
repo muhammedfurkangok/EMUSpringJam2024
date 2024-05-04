@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Ozgur.Scripts.WeaponScripts;
 using UnityEngine;

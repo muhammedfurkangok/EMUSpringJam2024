@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using Ozgur.Scripts.Pools;
 using UnityEngine;
 
 namespace Ozgur.Scripts.WeaponScripts
@@ -17,11 +18,17 @@ namespace Ozgur.Scripts.WeaponScripts
         public bool isAutomatic;
     }
 
+    public enum BulletType
+    {
+        Normal,
+        Rocket
+    }
+
     public abstract class WeaponBase : MonoBehaviour
     {
         [Header("Weapon Base: References")]
         public MeshRenderer[] meshRenderers;
-        [SerializeField] protected GameObject bulletPrefab;
+        [SerializeField] protected BulletType bulletType;
         [SerializeField] protected Transform[] bulletSpawnPoints;
 
         [Header("Weapon Base: Weapon Parameters")]
@@ -58,13 +65,12 @@ namespace Ozgur.Scripts.WeaponScripts
 
         protected virtual void Shoot()
         {
-            if (bulletSpawnPoints.Length == 1)
-            {
-                var bullet = Instantiate(bulletPrefab, bulletSpawnPoints[0].position, bulletSpawnPoints[0].rotation);
-                bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * currentWeaponStats.bulletSpeed;
-            }
-            
-            //other beretta change
+            if (bulletSpawnPoints.Length != 1) return;
+
+            var bullet = bulletType == BulletType.Normal ? BulletPool.Instance.GetItemFromPool() : RocketPool.Instance.GetItemFromPool();
+            bullet.transform.position = bulletSpawnPoints[0].position;
+            bullet.transform.rotation = bulletSpawnPoints[0].rotation;
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * currentWeaponStats.bulletSpeed;
         }
 
         public void GetAmmo(int ammo)
