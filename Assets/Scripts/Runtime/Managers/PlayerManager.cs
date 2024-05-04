@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour,IDamageable
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private Rigidbody playerRb;

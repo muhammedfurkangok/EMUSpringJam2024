@@ -7,7 +7,7 @@ using UnityEngine.AI;
 
 namespace Runtime.Managers
 {
-    public class LaserZombieManager : MonoBehaviour, IZombie
+    public class LaserZombieManager : MonoBehaviour, IZombie, IDamageable
     {
         #region Self Variables
 

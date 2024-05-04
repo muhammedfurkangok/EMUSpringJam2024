@@ -5,7 +5,7 @@ using Runtime.Interfaces;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ZombieManager : MonoBehaviour,IZombie
+public class ZombieManager : MonoBehaviour, IZombie, IDamageable
 {
 
     #region Self Variables

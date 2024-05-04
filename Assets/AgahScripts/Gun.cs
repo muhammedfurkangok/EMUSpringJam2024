@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Gun : MonoBehaviour
@@ -14,10 +13,16 @@ public abstract class Gun : MonoBehaviour
 
     //Gun parts
     protected Transform _muzzle;
-    
+
+    protected void Awake()
+    {
+        GunManager.OnShoot += Shoot;
+        GunManager.OnReload += Reload;
+        GunManager.OnUpgrade += Upgrade;
+    }
 
     //This struct is used to store the new stats of the gun after an upgrade.
-    protected struct GunUpgrade
+    public struct GunUpgrade
     {
         public GunUpgrade(float newDamage, float newRange, float newFireRate, float newAmmoCapacity, int upgradeLevel)
         {
@@ -34,16 +39,16 @@ public abstract class Gun : MonoBehaviour
         public float NewFireRate { get; private set; }
         public float NewAmmoCapacity { get; private set; }
     }
-
     protected virtual void Shoot()
     {
        Physics.Raycast(_muzzle.position, _muzzle.forward, out RaycastHit hit, _range);
-       //hit.collider.GetComponent<Health>().TakeDamage(_damage);
-       Debug.Log(hit.collider.name)
+        //hit.collider.GetComponent<Health>().TakeDamage(_damage);
+        Debug.Log(hit.collider.name + this.name);
     }
     protected virtual void Reload() 
     {
         _currentAmmo = _maxAmmo;
+        Debug.Log("Reloaded");
     }
     protected virtual void Upgrade(GunUpgrade upgrade)
     {
@@ -55,10 +60,16 @@ public abstract class Gun : MonoBehaviour
             _maxAmmo = upgrade.NewAmmoCapacity;
             _upgradeLevel++;
         }
+        else Debug.Log("This gun has that upgrade already" + upgrade);
     }
-}
 
-public class GunManager : MonoBehaviour
-{
-    private List<Gun> _guns = new List<Gun>();
+    public abstract GunUpgrade GetNextUpgrade();
+
+    private void OnDestroy()
+    {
+        GunManager.OnShoot -= Shoot;
+        GunManager.OnReload -= Reload;
+        GunManager.OnUpgrade -= Upgrade;
+    }
+
 }

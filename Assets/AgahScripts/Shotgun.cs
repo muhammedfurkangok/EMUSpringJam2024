@@ -7,8 +7,9 @@
     private GunUpgrade _gunUpgrade4;
     private GunUpgrade _gunUpgrade5;
 
-    private void Awake()
+    private new void Awake()
     {
+        base.Awake();
         _damage = 20;
         _range = 30;
         _fireRate = 0.5f;
@@ -34,5 +35,10 @@
     public void UpgradeGun()
     {
         //This is the upgrade function of the gun
+    }
+
+    public override GunUpgrade GetNextUpgrade()
+    {
+        throw new System.NotImplementedException();
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine.AI;
 
 namespace Runtime.Managers
 {
-    public class SpittingZombieManager : MonoBehaviour, IZombie
+    public class SpittingZombieManager : MonoBehaviour, IZombie, IDamageable
     {
         #region Self Variables
 
