@@ -23,6 +23,8 @@ namespace Ozgur.Scripts
             else if (Input.GetKeyDown(KeyCode.Alpha2)) ChangeWeaponIndex(1);
             else if (Input.GetKeyDown(KeyCode.Alpha3)) ChangeWeaponIndex(2);
             else if (Input.GetKeyDown(KeyCode.Alpha4)) ChangeWeaponIndex(3);
+
+            if (Input.GetMouseButtonDown(0)) currentWeapon.Shoot();
         }
 
         private void ChangeWeaponNextPrevious(bool isNext)
