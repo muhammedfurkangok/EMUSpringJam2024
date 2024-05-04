@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -21,6 +22,8 @@ public abstract class Gun : MonoBehaviour
         GunManager.OnUpgrade += Upgrade;
     }
 
+
+
     //This struct is used to store the new stats of the gun after an upgrade.
     public struct GunUpgrade
     {
@@ -41,21 +44,7 @@ public abstract class Gun : MonoBehaviour
     }
     protected virtual void Shoot()
     {
-        //Raycast to detect if the bullet hit something
-        if(!Physics.Raycast(_muzzle.position, _muzzle.forward, out RaycastHit hit, _range))
-            return;
-
-        Debug.DrawRay(_muzzle.position, _muzzle.forward * _range, Color.red, 10f);
-
-        //If the object hit has the IDamageable interface, it will take damage.
-        if (hit.collider.TryGetComponent<IDamageable>(out IDamageable damageable))
-        {
-            damageable.TakeDamage((int)_damage);
-        }
-        Debug.Log(damageable);
-
-        //Debug
-        Debug.Log(hit.collider.name + " " + this.name);
+        
     }
     protected virtual void Reload()
     {
