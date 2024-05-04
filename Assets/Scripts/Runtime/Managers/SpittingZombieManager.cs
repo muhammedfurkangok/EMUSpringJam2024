@@ -137,6 +137,11 @@ namespace Runtime.Managers
             spittingZombieQueue.Enqueue(zombie);
         }
 
+        public void LevelUpZombies(uint levelMultiplier)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
     }
