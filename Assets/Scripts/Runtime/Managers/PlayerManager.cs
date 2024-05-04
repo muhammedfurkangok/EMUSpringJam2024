@@ -5,6 +5,12 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private Rigidbody playerRb;
     [SerializeField] private Transform playerTransform;
+    #region Private Variables
+    
+    private int currentHealth = 100;
+    private int maxHealth = 100;
+
+    #endregion
 
     private void Update()
     {
@@ -57,8 +63,24 @@ public class PlayerManager : MonoBehaviour
         playerRb.velocity = new Vector3(horizontal * speed, playerRb.velocity.y, vertical * speed);
     }
 
-    public void TakeDamage(float attackDamage)
+    public void TakeDamage(int damage)
     {
-        throw new System.NotImplementedException();
+        currentHealth -= damage;
+        UpdateHealthBar();
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void UpdateHealthBar()
+    {
+        //haelthbar.fillAmount = (float)currentHealth / maxHealth;
+    }
+
+    private void Die()
+    {
+        //animaton
+        //position reset
     }
 }

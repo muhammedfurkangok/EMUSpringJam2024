@@ -1,17 +1,44 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using Runtime.Interfaces;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ZombieManager : MonoBehaviour
+public class ZombieManager : MonoBehaviour,IZombie
 {
+
+    #region Self Variables
+
+    #region Serialized Variables
+    
     [SerializeField] private Transform target;
     [SerializeField] private NavMeshAgent zombieAgent;
     [SerializeField] private float chaseSpeed = 5f;
     [SerializeField] private float attackRange = 2f;
-    [SerializeField] private float attackDamage = 10f;
+    [SerializeField] private int attackDamage = 10;
     [SerializeField] private float attackCooldown = 0.5f;
+    
+    #endregion
+    #region Private Variables
+    
+    private int currentHealth = 100;
+    private int maxHealth = 100;
+    private int ZOMBIE_POOL_SIZE = 100;
+    private Queue <GameObject> zombieQueue = new Queue<GameObject>();
 
+    #endregion
+ 
+    #endregion
+
+
+    
     private bool isAttacking = false;
+
+    private void Start()
+    {
+        CreateZombiePool();
+    }
 
     private void Update()
     {
@@ -29,13 +56,13 @@ public class ZombieManager : MonoBehaviour
         }
     }
 
-    private void AttackPlayer()
+    public void AttackPlayer()
     {
         transform.LookAt(target);
         StartCoroutine(Attack());
     }
 
-    private void ChasePlayer()
+    public void ChasePlayer()
     {
         Debug.Log("Chasing Player");
         if (zombieAgent != null)
@@ -62,4 +89,51 @@ public class ZombieManager : MonoBehaviour
         }
         isAttacking = false;
     }
+    
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        ReturnZombieToPool(gameObject);
+    }
+
+    #region Object Pooling Methods
+
+    public void CreateZombiePool()
+    {
+        for (int i = 0; i < ZOMBIE_POOL_SIZE; i++)
+        {
+            GameObject zombie = Instantiate(gameObject, Vector3.zero, Quaternion.identity);
+            zombie.SetActive(false);
+            zombieQueue.Enqueue(zombie);
+        }
+    }
+    
+    public GameObject GetZombieFromPool()
+    {
+        if (zombieQueue.Count > 0)
+        {
+            GameObject zombie = zombieQueue.Dequeue();
+            zombie.SetActive(true);
+            return zombie;
+        }
+        return null;
+    }
+    
+    public void ReturnZombieToPool(GameObject zombie)
+    {
+        zombie.SetActive(false);
+        zombieQueue.Enqueue(zombie);
+    }
+    
+
+    
+    #endregion
 }
