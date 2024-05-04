@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9326d4a-38cf-404e-957d-5798d0729832" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Egemen/Scenes/Healtbar.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Egemen/Scenes/Healtbar.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EMUSpringJam2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EMUSpringJam2024/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Egemen.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Egemen.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Egemen/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Egemen/Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Egemen/Scenes/Demo Arena.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Egemen/Scenes/Demo Arena.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Egemen/Scenes/Healtbar.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Egemen/Scenes/Healtbar.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AgahScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AgahScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FeelScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FeelScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Modern Lowpoly Guns And Weapons/Scenes/Demoscene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Modern Lowpoly Guns And Weapons/Scenes/Demoscene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/NavMeshComponents-master/LICENSE.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/NavMeshComponents-master/LICENSE.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,26 +42,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "healthbar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;healthbar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\PC\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\PC\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Unity.exe" />
@@ -104,6 +115,7 @@
       <workItem from="1714789582798" duration="883000" />
       <workItem from="1714790498782" duration="3086000" />
       <workItem from="1714842492091" duration="938000" />
+      <workItem from="1714852944414" duration="1341000" />
     </task>
     <servers />
   </component>
