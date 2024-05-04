@@ -24,3 +24,30 @@ namespace Runtime.Managers
         }
     }
 }
+public class ZombieLeveller : MonoBehaviour
+{
+    //Will level up zombies every 30 seconds
+    private void Update()
+    {
+        if ((int)Time.time % 30 == 0)
+        {
+
+        }
+    }
+}
+public class ZombieSpawner : MonoBehaviour
+{
+    //Will spawn zombies every 5 seconds
+    private void Update()
+    {
+        if ((int)Time.time % 5 == 0)
+        {
+            SpawnZombie();
+        }
+    }
+
+    private void SpawnZombie()
+    {
+
+    }
+}

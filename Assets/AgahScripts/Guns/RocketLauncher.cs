@@ -1,4 +1,6 @@
-﻿public class RocketLauncher : Gun
+﻿using UnityEngine;
+
+public class RocketLauncher : Gun
 {
     protected float _explosionRadius;
     //This struct is used to store the new stats of the gun after an upgrade.
@@ -6,6 +8,9 @@
     private GunUpgrade _gunUpgrade2;
     private GunUpgrade _gunUpgrade3;
     private GunUpgrade _gunUpgrade4;
+
+    [Header("Muzzle")]
+    [SerializeField] private Transform muzzle;
 
     private new void Awake()
     {

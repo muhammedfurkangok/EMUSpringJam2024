@@ -1,9 +1,14 @@
-﻿public class DontResetGun : Gun
+﻿using UnityEngine;
+
+public class DontResetGun : Gun
 {
     //This struct is used to store the new stats of the gun after an upgrade.
     private GunUpgrade _gunUpgrade1;
     private GunUpgrade _gunUpgrade2;
     private GunUpgrade _gunUpgrade3;
+
+    [Header("Muzzle")]
+    [SerializeField] private Transform muzzle;
 
     private new void Awake()
     {

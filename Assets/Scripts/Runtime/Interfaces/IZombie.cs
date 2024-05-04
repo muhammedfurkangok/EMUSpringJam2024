@@ -4,5 +4,6 @@ namespace Runtime.Interfaces
     {
         void AttackPlayer();
         void ChasePlayer();
+        void LevelUpZombies(uint levelMultiplier);
     }
 }

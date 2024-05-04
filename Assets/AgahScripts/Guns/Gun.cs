@@ -41,11 +41,23 @@ public abstract class Gun : MonoBehaviour
     }
     protected virtual void Shoot()
     {
-       Physics.Raycast(_muzzle.position, _muzzle.forward, out RaycastHit hit, _range);
-       hit.collider.GetComponent<IDamageable>().TakeDamage((int)_damage);
-       Debug.Log(hit.collider.name + this.name);
+        //Raycast to detect if the bullet hit something
+        if(!Physics.Raycast(_muzzle.position, _muzzle.forward, out RaycastHit hit, _range))
+            return;
+
+        Debug.DrawRay(_muzzle.position, _muzzle.forward * _range, Color.red, 10f);
+
+        //If the object hit has the IDamageable interface, it will take damage.
+        if (hit.collider.TryGetComponent<IDamageable>(out IDamageable damageable))
+        {
+            damageable.TakeDamage((int)_damage);
+        }
+        Debug.Log(damageable);
+
+        //Debug
+        Debug.Log(hit.collider.name + " " + this.name);
     }
-    protected virtual void Reload() 
+    protected virtual void Reload()
     {
         _currentAmmo = _maxAmmo;
         Debug.Log("Reloaded");
