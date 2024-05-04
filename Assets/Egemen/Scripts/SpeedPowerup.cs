@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class SpeedPowerup : MonoBehaviour
 {
-    public float speedIncreaseAmount = 2f;
+    public float speedIncreaseAmount = 5f;
     public float duration = 5f;
     
     void OnTriggerEnter(Collider other)
@@ -22,7 +23,7 @@ public class SpeedPowerup : MonoBehaviour
                 characterController.speed += speedIncreaseAmount;
 
                 // Start the coroutine to revert speed back after the duration
-                StartCoroutine(RevertSpeed(characterController));
+                RevertSpeed(characterController);
                 
                 // Disable the power-up object (optional)
                 gameObject.SetActive(false);
@@ -35,12 +36,10 @@ public class SpeedPowerup : MonoBehaviour
         }
     }
 
-    IEnumerator RevertSpeed(DummyPlayerControl characterController)
+    async void RevertSpeed(DummyPlayerControl characterController)
     {
-        // Wait for the specified duration
-        yield return new WaitForSeconds(duration);
-
-        // Revert the speed back to its original value
+        await UniTask.WaitForSeconds(5f);
         characterController.speed -= speedIncreaseAmount;
+        
     }
 }
