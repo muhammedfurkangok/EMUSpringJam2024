@@ -42,8 +42,8 @@ public abstract class Gun : MonoBehaviour
     protected virtual void Shoot()
     {
        Physics.Raycast(_muzzle.position, _muzzle.forward, out RaycastHit hit, _range);
-        //hit.collider.GetComponent<Health>().TakeDamage(_damage);
-        Debug.Log(hit.collider.name + this.name);
+       hit.collider.GetComponent<IDamageable>().TakeDamage((int)_damage);
+       Debug.Log(hit.collider.name + this.name);
     }
     protected virtual void Reload() 
     {
