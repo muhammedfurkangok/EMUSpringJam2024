@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Runtime.Interfaces;
+using Runtime.Signals;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -44,7 +45,10 @@ namespace Runtime.Managers
             attackDamage += 3 * (int)levelMultiplier;
             attackCooldown -= 0.01f * (int)levelMultiplier;
         }
-
+        private void Awake()
+        {
+            TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
+        }
         private void Start()
         {
             CreateZombiePool();

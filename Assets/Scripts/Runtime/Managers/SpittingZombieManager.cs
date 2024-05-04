@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Runtime.Interfaces;
+using Runtime.Signals;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -36,7 +37,10 @@ namespace Runtime.Managers
 
 
         private bool isAttacking = false;
-
+        private void Awake()
+        {
+            TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
+        }
         public void LevelUpZombie(uint levelMultiplier)
         {
             maxHealth += 10 * (int)levelMultiplier;
