@@ -5,31 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9326d4a-38cf-404e-957d-5798d0729832" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/FImpossible Creations/All Fimpossible Creations Plugins Assembly Definitions.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/FImpossible Creations/Editor/Plugins - Editor - Animating/Animation Designer/Animation Designer Demo - HDRP Materials.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/FImpossible Creations/Editor/Plugins - Editor - Animating/Animation Designer/Animation Designer Demo - URP Materials.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/FImpossible Creations/Editor/Plugins - Editor - Animating/Animation Designer/Assembly Definitions/Just Animation Designer Assembly Definitions.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/FImpossible Creations/Editor/Plugins - Editor - Animating/Animation Designer/DEMO - Animation Designer.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemos/FeelTemplatesDemo.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeArrow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeArrow.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeBallInside.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeBallInside.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeBallOutside.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeBallOutside.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeDustMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeDustMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikePinBody.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikePinBody.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikePinStripes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikePinStripes.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeReset.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeReset.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeResetFloor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeResetFloor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeWood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemosURP/Strike/Materials/FeelStrikeWood.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/NiceVibrations/OlderVersions/v1.7/NiceVibrations-v-1-7.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/NiceVibrations/OlderVersions/v2.0.1/NiceVibrations-v-2-0-1.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/NiceVibrations/OlderVersions/v3.9/NiceVibrations-v-3-9-0.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EMUSpringJam2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EMUSpringJam2024/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Egemen/Scripts/GameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Egemen/Scripts/GameHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Egemen/Scripts/HealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Egemen/Scripts/HealthBar.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +98,7 @@
       <workItem from="1714776331649" duration="240000" />
       <workItem from="1714777081676" duration="668000" />
       <workItem from="1714778164599" duration="2043000" />
+      <workItem from="1714782383694" duration="1212000" />
     </task>
     <servers />
   </component>
