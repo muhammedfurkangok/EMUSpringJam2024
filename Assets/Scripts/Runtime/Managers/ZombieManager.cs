@@ -73,7 +73,7 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
     public void ChasePlayer()
     {
         Debug.Log("Chasing Player");
-        if (zombieAgent != null)
+vvvv        if (zombieAgent != null)
         {
             zombieAgent.SetDestination(target.position);
             zombieAgent.speed = chaseSpeed;
