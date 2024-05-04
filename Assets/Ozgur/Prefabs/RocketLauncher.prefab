@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 657250427660438150}
   - component: {fileID: 5516395888853524121}
   - component: {fileID: 201083520402826752}
-  - component: {fileID: 5052692609244554660}
   - component: {fileID: 1373182857319948230}
   m_Layer: 0
   m_Name: RocketLauncher
@@ -86,27 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5052692609244554660
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7153500306817280221}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1373182857319948230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +97,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7fde8b1c0b42d795e23ed457efc1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  bulletSpawnPoint: {fileID: 0}
+  weaponStats: []
+  currentWeaponStats:
+    damage: 0
+    bulletSpeed: 0
+    fireWaitTime: 0
+    maxAmmo: 0
+    playerRecoil: 0
+    isAutomatic: 0
+  currentAmmo: 0
+  currentLevel: 0
+  canShoot: 0
 --- !u!1 &8025096079013851448
 GameObject:
   m_ObjectHideFlags: 0

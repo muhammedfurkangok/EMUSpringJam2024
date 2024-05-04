@@ -24,7 +24,15 @@ namespace Ozgur.Scripts
             else if (Input.GetKeyDown(KeyCode.Alpha3)) ChangeWeaponIndex(2);
             else if (Input.GetKeyDown(KeyCode.Alpha4)) ChangeWeaponIndex(3);
 
-            if (Input.GetMouseButtonDown(0)) currentWeapon.Shoot();
+            if (currentWeapon.IsAutomatic())
+            {
+                if (Input.GetMouseButton(0)) currentWeapon.ShootBase();
+            }
+
+            else
+            {
+                if (Input.GetMouseButtonDown(0)) currentWeapon.ShootBase();
+            }
         }
 
         private void ChangeWeaponNextPrevious(bool isNext)
@@ -41,10 +49,10 @@ namespace Ozgur.Scripts
         {
             if (index < 0 || index >= weapons.Count) return;
 
-            currentWeapon.gameObject.SetActive(false);
+            foreach (var meshRenderer in currentWeapon.meshRenderers) meshRenderer.enabled = false;
             currentWeaponIndex = index;
             currentWeapon = weapons[currentWeaponIndex];
-            currentWeapon.gameObject.SetActive(true);
+            foreach (var meshRenderer in currentWeapon.meshRenderers) meshRenderer.enabled = true;
         }
     }
 }
