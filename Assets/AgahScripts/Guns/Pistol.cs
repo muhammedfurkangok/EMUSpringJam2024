@@ -35,7 +35,23 @@ public class Pistol : Gun
 
     protected override void Shoot()
     {
-        base.Shoot();
+        if(GunManager.GetCurrentGun() != this)
+            return;
+        //Raycast to detect if the bullet hit something
+        if (!Physics.Raycast(_muzzle.position, _muzzle.forward, out RaycastHit hit, _range))
+            return;
+
+        //If the object hit has the IDamageable interface, it will take damage.
+        if (hit.collider.TryGetComponent<IDamageable>(out IDamageable damageable))
+        {
+            damageable.TakeDamage((int)_damage);
+        }
+
+        Debug.Log(damageable);
+
+        Debug.DrawRay(_muzzle.position, _muzzle.forward * _range, Color.blue, 10f);
+
+        Debug.Log(hit.collider.name + " " + this.name);
     }
 
     protected override void Reload()

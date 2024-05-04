@@ -35,7 +35,7 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
     
     private bool isAttacking = false;
 
-    public void LevelUpZombies(uint levelMultiplier)
+    public void LevelUpZombie(uint levelMultiplier)
     {
         maxHealth += 10 * (int)levelMultiplier;
         chaseSpeed += .5f * levelMultiplier;

@@ -37,6 +37,14 @@ namespace Runtime.Managers
 
         private bool isAttacking = false;
 
+        public void LevelUpZombie(uint levelMultiplier)
+        {
+            maxHealth += 10 * (int)levelMultiplier;
+            chaseSpeed += .5f * levelMultiplier;
+            attackDamage += 3 * (int)levelMultiplier;
+            attackCooldown -= 0.01f * (int)levelMultiplier;
+        }
+
         private void Start()
         {
             CreateZombiePool();
@@ -137,10 +145,7 @@ namespace Runtime.Managers
             spittingZombieQueue.Enqueue(zombie);
         }
 
-        public void LevelUpZombies(uint levelMultiplier)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         #endregion
 

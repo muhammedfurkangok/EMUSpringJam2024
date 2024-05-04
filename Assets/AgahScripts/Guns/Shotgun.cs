@@ -10,7 +10,7 @@ public class Shotgun : Gun
     private GunUpgrade _gunUpgrade5;
 
     [Header("Muzzle")]
-    [SerializeField] private Transform muzzle;
+    [SerializeField] private Transform[] _muzzles;
 
     private new void Awake()
     {
@@ -26,9 +26,31 @@ public class Shotgun : Gun
         _gunUpgrade4 = new GunUpgrade(40, 40, 1.5f, 80, 4);
         _gunUpgrade5 = new GunUpgrade(50, 45, 2f, 80, 5);
     }
+
+   
     protected override void Shoot()
     {
-        //This is the shoot function of the gun
+        if (GunManager.GetCurrentGun() != this)
+            return;
+
+        for (int i = 0; i < 5; i++) 
+        {
+            //Raycast to detect if the bullets hit something
+            if (!(Physics.Raycast(_muzzles[i].position, _muzzles[i].forward, out RaycastHit hit, _range)))
+                return;
+
+            Debug.DrawRay(_muzzles[i].position, _muzzles[i].forward * _range, Color.red, 10f);
+
+            //If the object hit has the IDamageable interface, it will take damage.
+            if (hit.collider.TryGetComponent<IDamageable>(out IDamageable damageable))
+            {
+                damageable.TakeDamage((int)_damage);
+            }
+            Debug.Log(damageable);
+
+            //Debug
+            Debug.Log(hit.collider.name + " " + this.name);
+        }
     }
 
     protected override void Reload()

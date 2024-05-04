@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class GunManager : MonoBehaviour
 {
     [SerializeField]List<Gun> _guns = new(5);
-    private Gun currentGun;
+    private static Gun currentGun;
 
     public static event UnityAction OnShoot;
     public static event UnityAction OnReload;
@@ -64,6 +64,10 @@ public class GunManager : MonoBehaviour
         }
     }
 
+    public static Gun GetCurrentGun()
+    {
+        return currentGun;
+    }
     void SwitchGun(int index)
     {
         Debug.Log("Switching to gun " + index);
