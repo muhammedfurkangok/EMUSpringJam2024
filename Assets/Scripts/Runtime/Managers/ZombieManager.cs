@@ -18,10 +18,10 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
     [SerializeField] private float attackRange = 2f;
     [SerializeField] private int attackDamage = 10;
     [SerializeField] private float attackCooldown = 0.5f;
-    
+
     #endregion
     #region Private Variables
-    
+
     private int currentHealth = 100;
     private int maxHealth = 100;
     private int ZOMBIE_POOL_SIZE = 100;
@@ -34,6 +34,14 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
 
     
     private bool isAttacking = false;
+
+    public void LevelUpZombies(uint levelMultiplier)
+    {
+        maxHealth += 10 * (int)levelMultiplier;
+        chaseSpeed += .5f * levelMultiplier;
+        attackDamage += 3 * (int)levelMultiplier;
+        attackCooldown -= 0.01f * (int)levelMultiplier;
+    }
 
     private void Start()
     {

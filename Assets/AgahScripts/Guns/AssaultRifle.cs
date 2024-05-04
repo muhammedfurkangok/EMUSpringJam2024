@@ -1,4 +1,6 @@
-﻿public class AssaultRifle : Gun
+﻿using UnityEngine;
+
+public class AssaultRifle : Gun
 {
 
     //This struct is used to store the new stats of the gun after an upgrade.
@@ -8,6 +10,9 @@
     private GunUpgrade _gunUpgrade4;
     private GunUpgrade _gunUpgrade5;
     private GunUpgrade _gunUpgrade6;
+
+    [Header("Muzzle")]
+    [SerializeField] private Transform muzzle;
 
     private new void Awake()
     {
