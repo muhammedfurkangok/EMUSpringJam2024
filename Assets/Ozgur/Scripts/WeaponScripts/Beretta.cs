@@ -25,6 +25,8 @@ namespace Ozgur.Scripts.WeaponScripts
             bullet.transform.position = bulletSpawnPoints[currentBerettaIndex].position;
             bullet.transform.rotation = bulletSpawnPoints[currentBerettaIndex].rotation;
             bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * currentWeaponStats.bulletSpeed;
+
+            bullet.InitBullet(currentWeaponStats.damage);
         }
 
         protected override async UniTask PlayShootAnimation(Transform transform)

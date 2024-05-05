@@ -5,29 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9326d4a-38cf-404e-957d-5798d0729832" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Ozgur.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Ozgur/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Ozgur/Materials/PlayerFaceMaterial.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Ozgur/Materials/PlayerFaceMaterial.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Ozgur/Materials/PlayerMainMaterial.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Ozgur/Materials/PlayerMainMaterial.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Ozgur/Scenes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Ozgur/Scenes/OzgurScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Ozgur/Scenes/OzgurScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/PlayerController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/PlayerController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OzgurScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OzgurScene.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EMUSpringJam2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EMUSpringJam2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Egemen.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Egemen.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Egemen/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Egemen/Materials.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Egemen/Scenes/Demo Arena.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Egemen/Scenes/Demo Arena.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Egemen/Scenes/Healtbar.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Egemen/Scenes/Healtbar.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AgahScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AgahScene.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FeelScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FeelScene.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/BulletScripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/BulletScripts/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/BulletScripts/Rocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/BulletScripts/Rocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/PoolScripts/BulletPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/PoolScripts/BulletPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/PoolScripts/RocketPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/PoolScripts/RocketPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/WeaponScripts/Beretta.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/WeaponScripts/Beretta.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/WeaponScripts/Shotgun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/WeaponScripts/Shotgun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/WeaponScripts/WeaponBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/WeaponScripts/WeaponBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +46,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ozgurBranch",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -71,9 +56,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\PC\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\ozgur\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\ozgur\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\ozgur\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -130,6 +115,7 @@
       <workItem from="1714789582798" duration="883000" />
       <workItem from="1714790498782" duration="3086000" />
       <workItem from="1714842492091" duration="938000" />
+      <workItem from="1714921957385" duration="316000" />
     </task>
     <servers />
   </component>

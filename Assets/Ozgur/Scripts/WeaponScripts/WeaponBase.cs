@@ -83,6 +83,8 @@ namespace Ozgur.Scripts.WeaponScripts
             bullet.transform.position = bulletSpawnPoints[0].position;
             bullet.transform.rotation = bulletSpawnPoints[0].rotation;
             bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * currentWeaponStats.bulletSpeed;
+
+            bullet.InitBullet(currentWeaponStats.damage);
         }
 
         public void GetAmmo(int ammo)
