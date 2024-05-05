@@ -39,13 +39,17 @@ namespace Runtime.Managers
         }
         private void FireEvents()
         {
+            Debug.Log((int)elapsedTime % 30);
+            Debug.LogWarning((int)elapsedTime);
             if ((int)elapsedTime % 30 == 0 && elapsedTime % 60 != 0 && elapsedTime % 300 != 0)
             {
                 TimerSignals.Instance.OnThirtySecondsPassed();
+                Debug.Log("30 seconds passed");
             }
             if ((int)elapsedTime % 60 == 0 && elapsedTime % 300 != 0)
             {
                 TimerSignals.Instance.OnOneMinutePassed();
+                Debug.Log("60 seconds passed");
             }
             if ((int)elapsedTime % 299 == 0)
             {

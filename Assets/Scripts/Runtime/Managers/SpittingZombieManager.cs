@@ -25,7 +25,7 @@ namespace Runtime.Managers
 
 
         private bool isAttacking = false;
-        private void Awake()
+        private void OnEnable()
         {
             TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
         }
@@ -44,6 +44,7 @@ namespace Runtime.Managers
             attackDamage += 3 * (int)levelMultiplier;
             attackCooldown -= 0.01f * (int)levelMultiplier;
             currentHealth = maxHealth;  
+            Debug.Log("Spitting Zombie Leveled up!!");
         }
         private void Update()
         {

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Cysharp.Threading.Tasks;
 using Ozgur.Scripts;
 using Runtime.Interfaces;
 using Runtime.Signals;
@@ -22,8 +23,9 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
     
     private bool isAttacking = false;
 
-    private void Awake()
+    private async void Awake()
     {
+       await UniTask.Yield();
         TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
     }
     private void OnDestroy()
@@ -41,6 +43,8 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
         attackDamage += 3 * (int)levelMultiplier;
         attackCooldown -= 0.01f * (int)levelMultiplier;
         currentHealth = maxHealth;
+        Debug.Log("Standart Zombie Leveled up!!");
+
     }
 
     private void Update()

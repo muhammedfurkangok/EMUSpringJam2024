@@ -26,7 +26,6 @@ namespace Runtime.Managers
 
         private void Awake()
         {
-            TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
         }
         public void LevelUpZombie(uint levelMultiplier)
         {
@@ -35,11 +34,13 @@ namespace Runtime.Managers
             attackDamage += 3 * (int)levelMultiplier;
             attackCooldown -= 0.01f * (int)levelMultiplier;
             currentHealth = maxHealth;
-            Debug.Log("Zombie Leveled up!!");
+            Debug.Log("Laser Zombie Leveled up!!");
         }
 
         private void Start()
         {
+            TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
+
             target = Player.Instance.transform;
         }
 
