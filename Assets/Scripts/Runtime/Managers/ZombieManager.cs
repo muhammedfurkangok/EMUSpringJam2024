@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using Runtime.Interfaces;
 using UnityEngine;
 using UnityEngine.AI;
@@ -24,8 +23,7 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
 
     private int currentHealth = 100;
     private int maxHealth = 100;
-    private int ZOMBIE_POOL_SIZE = 100;
-    private Queue <GameObject> zombieQueue = new Queue<GameObject>();
+
 
     #endregion
  
@@ -41,11 +39,6 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
         chaseSpeed += .5f * levelMultiplier;
         attackDamage += 3 * (int)levelMultiplier;
         attackCooldown -= 0.01f * (int)levelMultiplier;
-    }
-
-    private void Start()
-    {
-        CreateZombiePool();
     }
 
     private void Update()
@@ -109,39 +102,6 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
 
     private void Die()
     {
-        ReturnZombieToPool(gameObject);
+       ZombiePool.Instance.ReturnZombieToPool(gameObject);
     }
-
-    #region Object Pooling Methods
-
-    public void CreateZombiePool()
-    {
-        for (int i = 0; i < ZOMBIE_POOL_SIZE; i++)
-        {
-            GameObject zombie = Instantiate(gameObject, Vector3.zero, Quaternion.identity);
-            zombie.SetActive(false);
-            zombieQueue.Enqueue(zombie);
-        }
-    }
-    
-    public GameObject GetZombieFromPool()
-    {
-        if (zombieQueue.Count > 0)
-        {
-            GameObject zombie = zombieQueue.Dequeue();
-            zombie.SetActive(true);
-            return zombie;
-        }
-        return null;
-    }
-    
-    public void ReturnZombieToPool(GameObject zombie)
-    {
-        zombie.SetActive(false);
-        zombieQueue.Enqueue(zombie);
-    }
-    
-
-    
-    #endregion
 }

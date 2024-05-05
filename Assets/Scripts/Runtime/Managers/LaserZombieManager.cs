@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using Runtime.Interfaces;
+using Runtime.Signals;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -26,14 +26,10 @@ namespace Runtime.Managers
 
         private int currentHealth = 100;
         private int maxHealth = 100;
-        private int ZOMBIE_POOL_SIZE = 100;
-        private Queue<GameObject> laserZombieQueue = new Queue<GameObject>();
-
+       
         #endregion
 
         #endregion
-
-
 
         private bool isAttacking = false;
 
@@ -44,12 +40,10 @@ namespace Runtime.Managers
             attackDamage += 3 * (int)levelMultiplier;
             attackCooldown -= 0.01f * (int)levelMultiplier;
         }
-
-        private void Start()
+        private void Awake()
         {
-            CreateZombiePool();
+            TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
         }
-
         private void Update()
         {
             if (target != null && !isAttacking)
@@ -112,42 +106,8 @@ namespace Runtime.Managers
 
         private void Die()
         {
-            ReturnZombieToPool(gameObject);
+           LaserZombiePool.Instance.ReturnZombieToPool(gameObject);
         }
-
-        #region Object Pooling Methods
-
-        public void CreateZombiePool()
-        {
-            for (int i = 0; i < ZOMBIE_POOL_SIZE; i++)
-            {
-                GameObject zombie = Instantiate(gameObject, Vector3.zero, Quaternion.identity);
-                zombie.SetActive(false);
-                laserZombieQueue.Enqueue(zombie);
-            }
-        }
-
-        public GameObject GetZombieFromPool()
-        {
-            if (laserZombieQueue.Count > 0)
-            {
-                GameObject zombie = laserZombieQueue.Dequeue();
-                zombie.SetActive(true);
-                return zombie;
-            }
-
-            return null;
-        }
-
-        public void ReturnZombieToPool(GameObject zombie)
-        {
-            zombie.SetActive(false);
-            laserZombieQueue.Enqueue(zombie);
-        }
-
-      
-
-        #endregion
-
+    
     }
 }

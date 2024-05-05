@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using Runtime.Interfaces;
+using Runtime.Signals;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -26,8 +26,7 @@ namespace Runtime.Managers
 
         private int currentHealth = 100;
         private int maxHealth = 100;
-        private int ZOMBIE_POOL_SIZE = 100;
-        private Queue<GameObject> spittingZombieQueue = new Queue<GameObject>();
+       
 
         #endregion
 
@@ -36,7 +35,10 @@ namespace Runtime.Managers
 
 
         private bool isAttacking = false;
-
+        private void Awake()
+        {
+            TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
+        }
         public void LevelUpZombie(uint levelMultiplier)
         {
             maxHealth += 10 * (int)levelMultiplier;
@@ -44,12 +46,6 @@ namespace Runtime.Managers
             attackDamage += 3 * (int)levelMultiplier;
             attackCooldown -= 0.01f * (int)levelMultiplier;
         }
-
-        private void Start()
-        {
-            CreateZombiePool();
-        }
-
         private void Update()
         {
             if (target != null && !isAttacking)
@@ -112,42 +108,8 @@ namespace Runtime.Managers
 
         private void Die()
         {
-            ReturnZombieToPool(gameObject);
-        }
-
-        #region Object Pooling Methods
-
-        public void CreateZombiePool()
-        {
-            for (int i = 0; i < ZOMBIE_POOL_SIZE; i++)
-            {
-                GameObject zombie = Instantiate(gameObject, Vector3.zero, Quaternion.identity);
-                zombie.SetActive(false);
-                spittingZombieQueue.Enqueue(zombie);
-            }
-        }
-
-        public GameObject GetZombieFromPool()
-        {
-            if (spittingZombieQueue.Count > 0)
-            {
-                GameObject zombie = spittingZombieQueue.Dequeue();
-                zombie.SetActive(true);
-                return zombie;
-            }
-
-            return null;
-        }
-
-        public void ReturnZombieToPool(GameObject zombie)
-        {
-            zombie.SetActive(false);
-            spittingZombieQueue.Enqueue(zombie);
-        }
-
-       
-
-        #endregion
-
+           SpittingZombiePool.Instance.ReturnZombieToPool(gameObject);
+        }      
     }
 }
+

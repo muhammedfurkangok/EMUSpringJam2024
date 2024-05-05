@@ -24,10 +24,10 @@ namespace Runtime.Signals
         #endregion
         
         public UnityAction OnTimerReset = delegate {  };
-        public UnityAction OnFiveSecondsPassed = delegate { };
         public UnityAction OnThirtySecondsPassed = delegate { };
         public UnityAction OnOneMinutePassed = delegate { };
         public UnityAction OnFiveMinutesPassed = delegate { };
+        public UnityAction OnSixMinutesPassed = delegate { }; // 6 minutes to reset the timer
 
     }
     
