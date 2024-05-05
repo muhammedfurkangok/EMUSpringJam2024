@@ -22,20 +22,20 @@ public static class DatabaseController
             ");";
         var dbCommand = DbConnection.CreateCommand(command);
         dbCommand.ExecuteNonQuery();
-        var vals = new LeaderboardScore[]
+        var vals = new[]
         {
-            // Below are fixed scores for the user
-            new LeaderboardScore().SetScore(100000).SetIsUser(false).SetId(1).SetBy("Alex"),
-            new LeaderboardScore().SetScore(90000).SetIsUser(false).SetId(2).SetBy("Emily"),
-            new LeaderboardScore().SetScore(80000).SetIsUser(false).SetId(3).SetBy("John"),
-            new LeaderboardScore().SetScore(70000).SetIsUser(false).SetId(4).SetBy("Jane"),
-            new LeaderboardScore().SetScore(60000).SetIsUser(false).SetId(5).SetBy("Doe"),
-            new LeaderboardScore().SetScore(50000).SetIsUser(false).SetId(6).SetBy("Smith"),
-            new LeaderboardScore().SetScore(40000).SetIsUser(false).SetId(7).SetBy("Johnson"),
-            new LeaderboardScore().SetScore(30000).SetIsUser(false).SetId(8).SetBy("Doe"),
-            new LeaderboardScore().SetScore(20000).SetIsUser(false).SetId(9).SetBy("Smith"),
-            new LeaderboardScore().SetScore(10000).SetIsUser(false).SetId(10).SetBy("Johnson"),
+            new LeaderboardScore { Score = 100000, IsUser = false, Id = 1, By = "Alex" },
+            new LeaderboardScore { Score = 90000, IsUser = false, Id = 2, By = "Emily" },
+            new LeaderboardScore { Score = 80000, IsUser = false, Id = 3, By = "John" },
+            new LeaderboardScore { Score = 70000, IsUser = false, Id = 4, By = "Jane" },
+            new LeaderboardScore { Score = 60000, IsUser = false, Id = 5, By = "Doe" },
+            new LeaderboardScore { Score = 50000, IsUser = false, Id = 6, By = "Smith" },
+            new LeaderboardScore { Score = 40000, IsUser = false, Id = 7, By = "Johnson" },
+            new LeaderboardScore { Score = 30000, IsUser = false, Id = 8, By = "Doe" },
+            new LeaderboardScore { Score = 20000, IsUser = false, Id = 9, By = "Smith" },
+            new LeaderboardScore { Score = 10000, IsUser = false, Id = 10, By = "Johnson" },
         };
+
          
         foreach(var val in vals)
         {
@@ -50,7 +50,9 @@ public static class DatabaseController
                           $" (id, score, timestamp, `by`, is_user)" +
                           $" VALUES " +
                           $"(?, ?, ?, ?, ?);";
-        var command = DbConnection.CreateCommand(commandText, new object[] {leaderboardScore.Id, leaderboardScore.Score, leaderboardScore.Timestamp, leaderboardScore.By, leaderboardScore.IsUser});
+        var command = DbConnection.CreateCommand(
+            commandText, 
+            new object[] {leaderboardScore.Id, leaderboardScore.Score, leaderboardScore.Timestamp, leaderboardScore.By, leaderboardScore.IsUser});
 
         // Insert with id if it has one and insert with timestamp if it has one
         command.ExecuteNonQuery();
@@ -59,17 +61,30 @@ public static class DatabaseController
     {
         var commandText = "SELECT score, timestamp, `by`, is_user, id FROM scoreboard;";
         var command = DbConnection.CreateCommand(commandText);
+        // Create a query based on this table.
+        // CREATE TABLE IF NOT EXISTS scoreboard(
+        //     id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL
+        //     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL 
+        //     score BIGINT
+        //     `by` VARCHAR
+        //     is_user BOOLEAN default true NOT NUL
+        // );
         var scoreboardTables = command.ExecuteQuery<ScoreboardTable>();
+        
         var leaderboardScores = new List<LeaderboardScore>();
+        
         foreach (var row in scoreboardTables)
+        {
+            Debug.Log(row);
             leaderboardScores.Add(
                 new LeaderboardScore()
-                    .SetScore(row.Score)
-                    .SetTimestamp(row.Timestamp)
-                    .SetBy(row.By)
-                    .SetIsUser(row.IsUser)
-                    .SetId(row.Id)
+                    .SetScore(row.score)
+                    .SetTimestamp(row.timestamp)
+                    .SetBy(row.by)
+                    .SetIsUser(row.is_user)
+                    .SetId(row.id)
             );
+        }
         return leaderboardScores;
     }
 
@@ -79,17 +94,27 @@ public static class DatabaseController
         var command = DbConnection.CreateCommand(commandText);
         var qRes = command.ExecuteQuery<ScoreboardTable>();
         if (qRes.Count == 0) return 0;
-        return qRes[0].Score;
+        return qRes[0].score;
     }
 }
 
+// Scoreboard table class to use with queries
+// public class ScoreboardTable
+// {
+//     public int score;
+//     public DateTime timestamp;
+//     public string by;
+//     public bool is_user;
+//     public int id;
+// }
+
 public class ScoreboardTable
 {
-    public int Id { get; set; }
-    public int Score { get; set; }
-    public DateTime Timestamp { get; set; }
-    public string By { get; set; }
-    public bool IsUser { get; set; }
+    public int id { get; set; }
+    public DateTime timestamp { get; set; }
+    public int score { get; set; }
+    public string by { get; set; }
+    public bool is_user { get; set; }
 }
 
 public class LeaderboardScore
