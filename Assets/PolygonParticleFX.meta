@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/PolygonParticleFX.meta
 guid: 3a23e48ac964b8d4cab65d2983732395
 folderAsset: yes
+========
+guid: 8874347a638e73f4cb0d240841668eb7
+>>>>>>>> main:Assets/Egemen/egmScenes/MainMenu.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

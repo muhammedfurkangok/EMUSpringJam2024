@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/PolygonParticleFX/Scenes.meta
 guid: 311ecc912f5824148abab36870ba6ef4
+========
+guid: 2dfc05083f06ebb45b2445a5f1dc41b5
+>>>>>>>> main:Assets/Egemen/FreeButtonSet/Fonts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

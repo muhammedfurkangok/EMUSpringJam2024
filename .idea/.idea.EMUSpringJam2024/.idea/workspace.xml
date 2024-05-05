@@ -5,14 +5,268 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9326d4a-38cf-404e-957d-5798d0729832" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Fonts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Fonts/Poppins-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Fonts/Poppins-Bold.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Fonts/Poppins-MediumItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Fonts/Poppins-MediumItalic.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Scenes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Scenes/SampleScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Scenes/SampleScene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_100.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_150.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_200.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_200.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_round_130.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_round_130.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_round_220.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_round_220.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_round_320.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_round_320.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_round_400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/buttons/button_round_400.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/cross.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/cross.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/cross_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/cross_02.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/cross_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/cross_03.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/cross_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/cross_04.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/radio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/radio.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/radio_100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/radio_100.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/radio_200.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/radio_200.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/radio_60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/radio_60.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/slider_handle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/slider_handle.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/toggle_bg_100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/toggle_bg_100.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/toggle_bg_200.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/toggle_bg_200.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/toggle_bg_50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/toggle_bg_50.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/universal_panel_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/universal_panel_10.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/universal_panel_20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/universal_panel_20.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/universal_panel_40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/controls/universal_panel_40.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/arrow_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/arrow_down.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/arrow_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/arrow_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/arrow_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/arrow_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/arrow_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/arrow_up.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/checkmark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/checkmark.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/heart.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/help.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/info.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/menu.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/message.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/message.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/minus.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/pause.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/play.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/plus.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/repeat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/repeat.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/settings.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/share.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/speaker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/speaker.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/star.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/user.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/128x128/x.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/arrow_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/arrow_down.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/arrow_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/arrow_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/arrow_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/arrow_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/arrow_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/arrow_up.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/checkmark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/checkmark.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/heart.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/help.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/info.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/menu.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/message.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/message.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/minus.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/pause.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/play.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/plus.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/repeat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/repeat.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/settings.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/share.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/speaker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/speaker.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/star.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/user.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/256x256/x.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/arrow_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/arrow_down.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/arrow_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/arrow_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/arrow_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/arrow_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/arrow_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/arrow_up.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/checkmark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/checkmark.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/heart.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/help.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/info.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/menu.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/message.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/message.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/minus.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/pause.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/play.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/plus.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/repeat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/repeat.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/settings.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/share.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/speaker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/speaker.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/star.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/user.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/32x32/x.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/arrow_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/arrow_down.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/arrow_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/arrow_left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/arrow_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/arrow_right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/arrow_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/arrow_up.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/checkmark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/checkmark.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/heart.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/help.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/info.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/menu.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/message.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/message.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/minus.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/pause.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/play.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/plus.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/repeat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/repeat.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/settings.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/share.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/speaker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/speaker.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/star.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/user.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/Textures/icons/64x64/x.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/FreeButtonSet/background.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/egmScripts/MenuScripts/LoadGame.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/egmScripts/MenuScripts/LoadGame.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/egmSprites/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Egemen/egmSprites/image.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EMUSpringJam2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EMUSpringJam2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/BulletScripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/BulletScripts/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/BulletScripts/Rocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/BulletScripts/Rocket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/PoolScripts/BulletPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/PoolScripts/BulletPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/PoolScripts/RocketPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/PoolScripts/RocketPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/WeaponScripts/Beretta.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/WeaponScripts/Beretta.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/WeaponScripts/Shotgun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/WeaponScripts/Shotgun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ozgur/Scripts/WeaponScripts/WeaponBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ozgur/Scripts/WeaponScripts/WeaponBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo Arena 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo Arena 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/FImpossible Creations/All Fimpossible Creations Plugins Assembly Definitions.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/FImpossible Creations/Editor/Plugins - Editor - Animating/Animation Designer/Animation Designer Demo - HDRP Materials.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/FImpossible Creations/Editor/Plugins - Editor - Animating/Animation Designer/Animation Designer Demo - URP Materials.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/FImpossible Creations/Editor/Plugins - Editor - Animating/Animation Designer/Assembly Definitions/Just Animation Designer Assembly Definitions.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/FImpossible Creations/Editor/Plugins - Editor - Animating/Animation Designer/DEMO - Animation Designer.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/FeelDemos/FeelTemplatesDemo.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-BlackItalic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-BlackItalic SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-BoldItalic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-BoldItalic SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-Hairline SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-Hairline SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-HairlineItalic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-HairlineItalic SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-HeavyItalic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-HeavyItalic SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-MediumItalic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-MediumItalic SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-Semibold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-Semibold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-SemiboldItalic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TempAssets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-SemiboldItalic SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/NiceVibrations/OlderVersions/v1.7/NiceVibrations-v-1-7.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/NiceVibrations/OlderVersions/v2.0.1/NiceVibrations-v-2-0-1.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TempAssets/Feel/NiceVibrations/OlderVersions/v3.9/NiceVibrations-v-3-9-0.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +277,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Egemen/Scripts/AmmoPowerup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Egemen/Scripts/DummyPlayerControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Egemen/Scripts/GameHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Egemen/Scripts/HealthBar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Egemen/Scripts/HealthPowerup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Egemen/Scripts/SpeedPowerup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Egemen/egmScripts/MenuScripts/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -41,27 +290,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;healthbar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\ozgur\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\ozgur\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\ozgur\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\PC\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Unity.exe" />
@@ -116,6 +365,9 @@
       <workItem from="1714790498782" duration="3086000" />
       <workItem from="1714842492091" duration="938000" />
       <workItem from="1714921957385" duration="316000" />
+      <workItem from="1714930893884" duration="95000" />
+      <workItem from="1714931004049" duration="931000" />
+      <workItem from="1714931947098" duration="1299000" />
     </task>
     <servers />
   </component>

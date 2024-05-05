@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/PolygonParticleFX/Scenes/Demo.unity.meta
 guid: ad343a8737470eb4cb90975973b145d2
+========
+guid: 6d6ffd585253053469f49c7d737db7fd
+>>>>>>>> main:Assets/Egemen/FreeButtonSet/Scenes/SampleScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
