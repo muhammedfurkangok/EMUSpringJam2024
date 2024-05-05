@@ -1,44 +1,46 @@
 using System;
 using System.Collections;
+using Ozgur.Scripts;
 using Runtime.Interfaces;
+using Runtime.Signals;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class ZombieManager : MonoBehaviour, IZombie, IDamageable
 {
-
-    #region Self Variables
-
-    #region Serialized Variables
-    
-    [SerializeField] private Transform target;
+    private Transform target;
     [SerializeField] private NavMeshAgent zombieAgent;
     [SerializeField] private float chaseSpeed = 5f;
     [SerializeField] private float attackRange = 2f;
     [SerializeField] private int attackDamage = 10;
     [SerializeField] private float attackCooldown = 0.5f;
 
-    #endregion
-    #region Private Variables
-
     private int currentHealth = 100;
     private int maxHealth = 100;
-
-
-    #endregion
- 
-    #endregion
 
 
     
     private bool isAttacking = false;
 
+    private void Awake()
+    {
+        TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
+    }
+    private void OnDestroy()
+    {
+        TimerSignals.Instance.OnThirtySecondsPassed -= () => LevelUpZombie(1);
+    }
+    private void Start()
+    {
+        target = Player.Instance.transform;
+    }
     public void LevelUpZombie(uint levelMultiplier)
     {
         maxHealth += 10 * (int)levelMultiplier;
         chaseSpeed += .5f * levelMultiplier;
         attackDamage += 3 * (int)levelMultiplier;
         attackCooldown -= 0.01f * (int)levelMultiplier;
+        currentHealth = maxHealth;
     }
 
     private void Update()
