@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using Ozgur.Scripts.Pools;
 using UnityEngine;
 
@@ -34,11 +36,19 @@ namespace Ozgur.Scripts.WeaponScripts
         [Header("Weapon Base: Weapon Parameters")]
         [SerializeField] protected List<WeaponStats> weaponStats;
 
+        [Header("Weapon Base: Shoot Animation Parameters")]
+        [SerializeField] protected float shootAnimationXEndRotation;
+        [SerializeField] protected float shootAnimationHalfDuration;
+        [SerializeField] protected Ease shootAnimationEase;
+
         [Header("Weapon Base: Info - No Touch")]
         [SerializeField] protected WeaponStats currentWeaponStats;
         [SerializeField] protected int currentAmmo;
         [SerializeField] protected int currentLevel;
         [SerializeField] protected bool canShoot;
+
+        protected Tweener shootAnimationTween;
+        protected CancellationTokenSource shootAnimationCancellationTokenSource;
 
         public bool IsAutomatic() => currentWeaponStats.isAutomatic;
 
@@ -67,6 +77,8 @@ namespace Ozgur.Scripts.WeaponScripts
         {
             if (bulletSpawnPoints.Length != 1) return;
 
+            PlayShootAnimation();
+
             var bullet = bulletType == BulletType.Normal ? BulletPool.Instance.GetItemFromPool() : RocketPool.Instance.GetItemFromPool();
             bullet.transform.position = bulletSpawnPoints[0].position;
             bullet.transform.rotation = bulletSpawnPoints[0].rotation;
@@ -87,6 +99,20 @@ namespace Ozgur.Scripts.WeaponScripts
             currentWeaponStats = weaponStats[currentLevel];
         }
 
-        protected virtual async UniTask PlayShootAnimation() { }
+        protected virtual async UniTask PlayShootAnimation()
+        {
+            shootAnimationCancellationTokenSource?.Cancel();
+            var cts = new CancellationTokenSource();
+            shootAnimationCancellationTokenSource = cts;
+
+            var targetRotation = new Vector3(shootAnimationXEndRotation, 0, 0);
+            shootAnimationTween = transform.DOLocalRotate(targetRotation, shootAnimationHalfDuration).SetEase(shootAnimationEase);
+            await shootAnimationTween.WithCancellation(cts.Token);
+
+            if (cts.Token.IsCancellationRequested) return;
+
+            shootAnimationTween = transform.DOLocalRotate(Vector3.zero, shootAnimationHalfDuration).SetEase(shootAnimationEase);
+            await shootAnimationTween.WithCancellation(cts.Token);
+        }
     }
 }

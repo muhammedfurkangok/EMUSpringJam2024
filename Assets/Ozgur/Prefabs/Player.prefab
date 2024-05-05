@@ -404,6 +404,11 @@ PrefabInstance:
       objectReference: {fileID: 237636574603776411}
     - target: {fileID: 1373182857319948230, guid: 6bb8364ad19b67847b06f5f3dfa3cbe4,
         type: 3}
+      propertyPath: shootAnimationEase
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373182857319948230, guid: 6bb8364ad19b67847b06f5f3dfa3cbe4,
+        type: 3}
       propertyPath: weaponStats.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -411,6 +416,16 @@ PrefabInstance:
         type: 3}
       propertyPath: meshRenderers.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373182857319948230, guid: 6bb8364ad19b67847b06f5f3dfa3cbe4,
+        type: 3}
+      propertyPath: shootAnimationHalfDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373182857319948230, guid: 6bb8364ad19b67847b06f5f3dfa3cbe4,
+        type: 3}
+      propertyPath: shootAnimationXEndRotation
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 1373182857319948230, guid: 6bb8364ad19b67847b06f5f3dfa3cbe4,
         type: 3}
@@ -508,6 +523,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
         type: 3}
+      propertyPath: shootAnimationEase
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
+        type: 3}
       propertyPath: weaponStats.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -515,6 +535,16 @@ PrefabInstance:
         type: 3}
       propertyPath: meshRenderers.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
+        type: 3}
+      propertyPath: shootAnimationHalfDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
+        type: 3}
+      propertyPath: shootAnimationXEndRotation
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
         type: 3}
@@ -774,6 +804,11 @@ PrefabInstance:
       objectReference: {fileID: 2165713595557888670}
     - target: {fileID: 6426037019624989903, guid: 0943cab5086760c4891700e55fb48d75,
         type: 3}
+      propertyPath: shootAnimationEase
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426037019624989903, guid: 0943cab5086760c4891700e55fb48d75,
+        type: 3}
       propertyPath: weaponStats.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -781,6 +816,16 @@ PrefabInstance:
         type: 3}
       propertyPath: meshRenderers.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426037019624989903, guid: 0943cab5086760c4891700e55fb48d75,
+        type: 3}
+      propertyPath: shootAnimationHalfDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426037019624989903, guid: 0943cab5086760c4891700e55fb48d75,
+        type: 3}
+      propertyPath: shootAnimationXEndRotation
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 6426037019624989903, guid: 0943cab5086760c4891700e55fb48d75,
         type: 3}
@@ -878,6 +923,11 @@ PrefabInstance:
       objectReference: {fileID: 5412992901513480782}
     - target: {fileID: 4415883960624213641, guid: 1cfcf583e01bfca4dbb845deed43a65a,
         type: 3}
+      propertyPath: shootAnimationEase
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415883960624213641, guid: 1cfcf583e01bfca4dbb845deed43a65a,
+        type: 3}
       propertyPath: weaponStats.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -885,6 +935,16 @@ PrefabInstance:
         type: 3}
       propertyPath: meshRenderers.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415883960624213641, guid: 1cfcf583e01bfca4dbb845deed43a65a,
+        type: 3}
+      propertyPath: shootAnimationHalfDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415883960624213641, guid: 1cfcf583e01bfca4dbb845deed43a65a,
+        type: 3}
+      propertyPath: shootAnimationXEndRotation
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 4415883960624213641, guid: 1cfcf583e01bfca4dbb845deed43a65a,
         type: 3}
