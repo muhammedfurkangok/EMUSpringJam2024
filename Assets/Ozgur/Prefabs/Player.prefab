@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 2610972700333663366}
   - component: {fileID: 319274207651842957}
   - component: {fileID: 3905017856897157472}
+  - component: {fileID: 5598596055945444931}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -218,13 +219,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593bb57ded4345aca1a14966cdae26a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidbody: {fileID: 4750085623776528165}
   maxHealth: 20
+  takeDamageForceIntensity: 3
   takeDamageAnimationIntensity: 3
   takeDamageAnimationDuration: 0.1
   takeDamageAnimationEase: 1
   deathAnimationDuration: 0.25
   deathAnimationEase: 1
   currentHealth: 0
+--- !u!114 &5598596055945444931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801041260311477748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab02fe62a514ebab65236441bc1cc92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3040509901663064829
 GameObject:
   m_ObjectHideFlags: 0
