@@ -5,7 +5,7 @@ public class ZombiePool : MonoBehaviour
 {
     public static ZombiePool Instance { get; private set; }
     [SerializeField] private GameObject _zombie;
-    private int ZOMBIE_POOL_SIZE = 100;
+    private int ZOMBIE_POOL_SIZE = 99;
     private Queue<GameObject> zombieQueue = new Queue<GameObject>();
 
     public int CurrentZombieCount => zombieQueue.Count;

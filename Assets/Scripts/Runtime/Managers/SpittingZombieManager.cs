@@ -18,30 +18,34 @@ namespace Runtime.Managers
         [SerializeField] private int attackDamage = 10;
         [SerializeField] private float attackCooldown = 0.5f;
 
+       
 
+        private uint level = 1;
         private int currentHealth = 100;
         private int maxHealth = 100;
        
-
 
         private bool isAttacking = false;
         private void OnDestroy()
         {
             TimerSignals.Instance.OnThirtySecondsPassed -= () => LevelUpZombie(1);
         }
+        private void OnEnable()
+        {
+            TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
+        }
         private void Start()
         {
             target = Player.Instance.transform;
-            TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
+
+            maxHealth += 10 * (int)level;
+            chaseSpeed += .5f * level;
+            attackDamage += 3 * (int)level;
+            currentHealth = maxHealth;
         }
         public void LevelUpZombie(uint levelMultiplier)
-        {
-            maxHealth += 10 * (int)levelMultiplier;
-            chaseSpeed += .5f * levelMultiplier;
-            attackDamage += 3 * (int)levelMultiplier;
-            attackCooldown -= 0.01f * (int)levelMultiplier;
-            currentHealth = maxHealth;  
-            Debug.Log("Spitting Zombie Leveled up!!");
+        { 
+            level += levelMultiplier;
         }
         private void Update()
         {

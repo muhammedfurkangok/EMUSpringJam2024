@@ -18,10 +18,14 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
 
     private int currentHealth = 100;
     private int maxHealth = 100;
+    private uint level = 1;
 
 
-    
     private bool isAttacking = false;
+    private void OnEnable()
+    {
+        TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
+    }
     private void OnDestroy()
     {
         TimerSignals.Instance.OnThirtySecondsPassed -= () => LevelUpZombie(1);
@@ -29,17 +33,14 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
     private void Start()
     {
         target = Player.Instance.transform;
-        TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
+        maxHealth += 10 * (int)level;
+        chaseSpeed += .5f * level;
+        attackDamage += 3 * (int)level;
+        currentHealth = maxHealth;
     }
     public void LevelUpZombie(uint levelMultiplier)
     {
-        maxHealth += 10 * (int)levelMultiplier;
-        chaseSpeed += .5f * levelMultiplier;
-        attackDamage += 3 * (int)levelMultiplier;
-        attackCooldown -= 0.01f * (int)levelMultiplier;
-        currentHealth = maxHealth;
-        Debug.Log("Standart Zombie Leveled up!!");
-
+        level += levelMultiplier;
     }
 
     private void Update()
