@@ -16,9 +16,10 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
     [SerializeField] private int attackDamage = 10;
     [SerializeField] private float attackCooldown = 0.5f;
 
-    private int currentHealth = 100;
-    private int maxHealth = 100;
-    private uint level = 1;
+    [Header("Health Info")]
+    [SerializeField] private int currentHealth = 35;
+    [SerializeField] private int maxHealth = 35;
+    [SerializeField] private uint level = 1;
 
 
     private bool isAttacking = false;
