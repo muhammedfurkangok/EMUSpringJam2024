@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Ozgur.Scripts
 {
-    public class WeaponManager : MonoBehaviour
+    public class WeaponController : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private List<WeaponBase> weapons;

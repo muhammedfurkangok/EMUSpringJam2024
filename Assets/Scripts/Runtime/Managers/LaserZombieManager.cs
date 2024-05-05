@@ -88,14 +88,14 @@ namespace Runtime.Managers
                 var playerManager = target.GetComponent<PlayerManager>();
                 if (playerManager != null)
                 {
-                    playerManager.TakeDamage(attackDamage);
+                    playerManager.TakeDamage(attackDamage, transform.forward);
                 }
             }
 
             isAttacking = false;
         }
 
-        public void TakeDamage(int damage)
+        public void TakeDamage(int damage, Vector3 hitDirection)
         {
             currentHealth -= damage;
             if (currentHealth <= 0)
