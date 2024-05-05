@@ -13,7 +13,7 @@ namespace Runtime.Managers
         private float elapsedTime = 0f;
         private float totalTime = 0f;
 
-        private void Awake()
+        private void Start()
         {
             TimerSignals.Instance.OnSixMinutesPassed += ResetTimer;
         }
