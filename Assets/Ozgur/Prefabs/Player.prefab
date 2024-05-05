@@ -219,6 +219,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593bb57ded4345aca1a14966cdae26a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentsToDisableOnDeath:
+  - {fileID: 319274207651842957}
+  - {fileID: 3905017856897157472}
+  - {fileID: 2610972700333663366}
   rigidbody: {fileID: 4750085623776528165}
   maxHealth: 20
   takeDamageForceIntensity: 3

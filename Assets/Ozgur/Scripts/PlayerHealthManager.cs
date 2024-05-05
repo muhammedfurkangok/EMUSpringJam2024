@@ -7,7 +7,9 @@ namespace Ozgur.Scripts
 {
     public class PlayerHealthManager : MonoBehaviour, IDamageable
     {
-        [Header("References")] [SerializeField] private Rigidbody rigidbody;
+        [Header("References")]
+        [SerializeField] private MonoBehaviour[] componentsToDisableOnDeath;
+        [SerializeField] private Rigidbody rigidbody;
 
         [Header("Parameters")]
         [SerializeField] private int maxHealth;
@@ -36,22 +38,26 @@ namespace Ozgur.Scripts
             if (currentHealth <= 0) return;
 
             currentHealth -= damage;
-            if (currentHealth <= 0) Die();
+            if (currentHealth <= 0) Die(damage, hitDirection);
             else PlayTakeDamageAnimation(damage, hitDirection);
         }
 
-        private void Die()
+        private async void Die(int damage, Vector3 hitDirection)
         {
-            //
+            foreach (var component in componentsToDisableOnDeath) component.enabled = false;
+            PlayDeathAnimation(damage, hitDirection);
 
-            PlayDeathAnimation();
+            await UniTask.WaitForSeconds(0.1f);
+            rigidbody.velocity = Vector3.zero;
         }
 
+        #if UNITY_EDITOR
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.K)) PlayTakeDamageAnimation(10, Vector3.forward);
-            if (Input.GetKeyDown(KeyCode.L)) PlayDeathAnimation();
+            if (Input.GetKeyDown(KeyCode.K)) TakeDamage(10, Vector3.forward);
+            if (Input.GetKeyDown(KeyCode.L)) Die(10, Vector3.forward);
         }
+        #endif
 
         private async void PlayTakeDamageAnimation(int damage, Vector3 hitDirection)
         {
@@ -88,9 +94,14 @@ namespace Ozgur.Scripts
             }
         }
 
-        private void PlayDeathAnimation()
+        private void PlayDeathAnimation(int damage, Vector3 hitDirection)
         {
-            transform.DORotate(new Vector3(-90, 0f, 0f), deathAnimationDuration).SetEase(deathAnimationEase).SetRelative();
+            var forceIntensity = takeDamageForceIntensity * damage;
+            rigidbody.AddForce(-hitDirection * forceIntensity, ForceMode.Impulse);
+
+            var rotationAxis = Vector3.Cross(hitDirection, Vector3.up).normalized;
+            var tiltForward = Quaternion.AngleAxis(90, rotationAxis);
+            transform.DORotateQuaternion(tiltForward, takeDamageAnimationDuration).SetEase(takeDamageAnimationEase).SetRelative();
         }
     }
 }
