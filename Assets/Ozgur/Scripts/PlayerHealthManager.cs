@@ -69,11 +69,23 @@ namespace Ozgur.Scripts
             takeAnimationTween = transform.DORotateQuaternion(tiltForward, takeDamageAnimationDuration).SetEase(takeDamageAnimationEase).SetRelative();
             await takeAnimationTween.WithCancellation(cts.Token);
 
-            if (cts.IsCancellationRequested) return;
+            if (cts.IsCancellationRequested)
+            {
+                var yEuler = transform.eulerAngles.y;
+                transform.eulerAngles = new Vector3(0, yEuler, 0);
+                return;
+            }
 
             var tiltBackward = Quaternion.AngleAxis(-animationIntensity, rotationAxis);
             takeAnimationTween = transform.DORotateQuaternion(tiltBackward, takeDamageAnimationDuration).SetEase(takeDamageAnimationEase).SetRelative();
             await takeAnimationTween.WithCancellation(cts.Token);
+
+            if (cts.IsCancellationRequested)
+            {
+                var yEuler = transform.eulerAngles.y;
+                transform.eulerAngles = new Vector3(0, yEuler, 0);
+                return;
+            }
         }
 
         private void PlayDeathAnimation()
