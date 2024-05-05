@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 namespace Ozgur.Scripts.WeaponScripts
 {
@@ -14,9 +15,9 @@ namespace Ozgur.Scripts.WeaponScripts
             base.Shoot();
         }
 
-        protected override async UniTask PlayShootAnimation()
+        protected override async UniTask PlayShootAnimation(Transform transform)
         {
-            await base.PlayShootAnimation();
+            await base.PlayShootAnimation(transform);
         }
     }
 }

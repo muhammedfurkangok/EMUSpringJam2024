@@ -77,7 +77,7 @@ namespace Ozgur.Scripts.WeaponScripts
         {
             if (bulletSpawnPoints.Length != 1) return;
 
-            PlayShootAnimation();
+            PlayShootAnimation(transform);
 
             var bullet = bulletType == BulletType.Normal ? BulletPool.Instance.GetItemFromPool() : RocketPool.Instance.GetItemFromPool();
             bullet.transform.position = bulletSpawnPoints[0].position;
@@ -99,7 +99,7 @@ namespace Ozgur.Scripts.WeaponScripts
             currentWeaponStats = weaponStats[currentLevel];
         }
 
-        protected virtual async UniTask PlayShootAnimation()
+        protected virtual async UniTask PlayShootAnimation(Transform transform)
         {
             shootAnimationCancellationTokenSource?.Cancel();
             var cts = new CancellationTokenSource();

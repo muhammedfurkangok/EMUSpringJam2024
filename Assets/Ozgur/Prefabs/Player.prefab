@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 801041260311477748}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0, w: -1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -528,6 +528,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
         type: 3}
+      propertyPath: barettas.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
+        type: 3}
+      propertyPath: berettas.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
+        type: 3}
+      propertyPath: barettas.Array.data[0]
+      value: 
+      objectReference: {fileID: 5246720404753981948}
+    - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
+        type: 3}
+      propertyPath: barettas.Array.data[1]
+      value: 
+      objectReference: {fileID: 1331223104824456071}
+    - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
+        type: 3}
+      propertyPath: berettas.Array.data[0]
+      value: 
+      objectReference: {fileID: 1331223104824456071}
+    - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
+        type: 3}
+      propertyPath: berettas.Array.data[1]
+      value: 
+      objectReference: {fileID: 5246720404753981948}
+    - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
+        type: 3}
       propertyPath: weaponStats.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -565,12 +595,12 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletSpawnPoints.Array.data[0]
       value: 
-      objectReference: {fileID: 5328198875944940383}
+      objectReference: {fileID: 605700508547413813}
     - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
         type: 3}
       propertyPath: bulletSpawnPoints.Array.data[1]
       value: 
-      objectReference: {fileID: 605700508547413813}
+      objectReference: {fileID: 5328198875944940383}
     - target: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
         type: 3}
       propertyPath: weaponStats.Array.data[0].damage
@@ -590,6 +620,16 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponStats.Array.data[0].fireWaitTime
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046108691978676034, guid: f61192c2031359747a0ae1c4785e7359,
+        type: 3}
+      propertyPath: m_Name
+      value: BulletSpawnPointRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138044499837624205, guid: f61192c2031359747a0ae1c4785e7359,
+        type: 3}
+      propertyPath: m_Name
+      value: BulletSpawnPointLeft
       objectReference: {fileID: 0}
     - target: {fileID: 4708278186130177173, guid: f61192c2031359747a0ae1c4785e7359,
         type: 3}
@@ -683,6 +723,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 304008041222754528}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1331223104824456071 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1603697012915266407, guid: f61192c2031359747a0ae1c4785e7359,
+    type: 3}
+  m_PrefabInstance: {fileID: 304008041222754528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1831796482507297021 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2113266304866156573, guid: f61192c2031359747a0ae1c4785e7359,
@@ -698,6 +744,12 @@ MonoBehaviour:
 --- !u!23 &2962717172033461337 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3253184571833896121, guid: f61192c2031359747a0ae1c4785e7359,
+    type: 3}
+  m_PrefabInstance: {fileID: 304008041222754528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5246720404753981948 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5541703371835470108, guid: f61192c2031359747a0ae1c4785e7359,
     type: 3}
   m_PrefabInstance: {fileID: 304008041222754528}
   m_PrefabAsset: {fileID: 0}
@@ -725,6 +777,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350050771374496197, guid: 0943cab5086760c4891700e55fb48d75,
+        type: 3}
+      propertyPath: m_Name
+      value: BulletSpawnPointMiddle
       objectReference: {fileID: 0}
     - target: {fileID: 5491915992742712377, guid: 0943cab5086760c4891700e55fb48d75,
         type: 3}
@@ -835,13 +892,23 @@ PrefabInstance:
     - target: {fileID: 6426037019624989903, guid: 0943cab5086760c4891700e55fb48d75,
         type: 3}
       propertyPath: bulletSpawnPoints.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6426037019624989903, guid: 0943cab5086760c4891700e55fb48d75,
         type: 3}
       propertyPath: bulletSpawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 2165713595557888670}
+    - target: {fileID: 6426037019624989903, guid: 0943cab5086760c4891700e55fb48d75,
+        type: 3}
+      propertyPath: bulletSpawnPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 5221873220581623152}
+    - target: {fileID: 6426037019624989903, guid: 0943cab5086760c4891700e55fb48d75,
+        type: 3}
+      propertyPath: bulletSpawnPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 7741000661709133858}
     - target: {fileID: 6426037019624989903, guid: 0943cab5086760c4891700e55fb48d75,
         type: 3}
       propertyPath: weaponStats.Array.data[0].damage
@@ -879,6 +946,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1359117447623967165}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &5221873220581623152 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6533416947534333133, guid: 0943cab5086760c4891700e55fb48d75,
+    type: 3}
+  m_PrefabInstance: {fileID: 1359117447623967165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5472243538519942514 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6426037019624989903, guid: 0943cab5086760c4891700e55fb48d75,
@@ -894,6 +967,12 @@ MonoBehaviour:
 --- !u!4 &6892168137441562726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5582608085187416539, guid: 0943cab5086760c4891700e55fb48d75,
+    type: 3}
+  m_PrefabInstance: {fileID: 1359117447623967165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7741000661709133858 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8768791086401657247, guid: 0943cab5086760c4891700e55fb48d75,
     type: 3}
   m_PrefabInstance: {fileID: 1359117447623967165}
   m_PrefabAsset: {fileID: 0}
