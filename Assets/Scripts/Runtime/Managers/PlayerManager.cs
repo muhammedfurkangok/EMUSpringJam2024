@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour,IDamageable
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private Rigidbody playerRb;
@@ -63,7 +63,7 @@ public class PlayerManager : MonoBehaviour
         playerRb.velocity = new Vector3(horizontal * speed, playerRb.velocity.y, vertical * speed);
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Vector3 hitDirection)
     {
         currentHealth -= damage;
         UpdateHealthBar();
