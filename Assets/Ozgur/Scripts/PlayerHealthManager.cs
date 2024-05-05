@@ -8,8 +8,11 @@ namespace Ozgur.Scripts
 {
     public class PlayerHealthManager : MonoBehaviour, IDamageable
     {
+        [Header("References")] [SerializeField] private Rigidbody rigidbody;
+
         [Header("Parameters")]
         [SerializeField] private int maxHealth;
+        [SerializeField] private int takeDamageForceIntensity;
 
         [Header("Animation Parameters")]
         [SerializeField] private float takeDamageAnimationIntensity;
@@ -35,7 +38,7 @@ namespace Ozgur.Scripts
 
             currentHealth -= damage;
             if (currentHealth <= 0) Die();
-            else PlayTakeDamageAnimation();
+            else PlayTakeDamageAnimation(damage, hitDirection);
         }
 
         private void Die()
@@ -47,26 +50,29 @@ namespace Ozgur.Scripts
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.K)) PlayTakeDamageAnimation();
+            if (Input.GetKeyDown(KeyCode.K)) PlayTakeDamageAnimation(10, Vector3.forward);
             if (Input.GetKeyDown(KeyCode.L)) PlayDeathAnimation();
         }
 
-        private async void PlayTakeDamageAnimation()
+        private async void PlayTakeDamageAnimation(int damage, Vector3 hitDirection)
         {
-            var damage = 10;
+            var forceIntensity = takeDamageForceIntensity * damage;
+            rigidbody.AddForce(-hitDirection * forceIntensity, ForceMode.Impulse);
 
             takeAnimationCancellationTokenSource?.Cancel();
             var cts = new CancellationTokenSource();
             takeAnimationCancellationTokenSource = cts;
 
-            var intensity = takeDamageAnimationIntensity * damage;
+            var animationIntensity = takeDamageAnimationIntensity * damage;
 
-            takeAnimationTween = transform.DORotate(new Vector3(-intensity, 0f, 0f), takeDamageAnimationDuration).SetEase(takeDamageAnimationEase).SetRelative();
+            var rotation = Quaternion.AngleAxis(-animationIntensity, -hitDirection);
+            takeAnimationTween = transform.DORotateQuaternion(rotation, takeDamageAnimationDuration).SetEase(takeDamageAnimationEase).SetRelative();
             await takeAnimationTween.WithCancellation(cts.Token);
 
             if (cts.IsCancellationRequested) return;
 
-            takeAnimationTween = transform.DORotate(new Vector3(intensity, 0f, 0f), takeDamageAnimationDuration).SetEase(takeDamageAnimationEase).SetRelative();
+            rotation = Quaternion.AngleAxis(animationIntensity, -hitDirection);
+            takeAnimationTween = transform.DORotateQuaternion(rotation, takeDamageAnimationDuration).SetEase(takeDamageAnimationEase).SetRelative();
             await takeAnimationTween.WithCancellation(cts.Token);
         }
 
