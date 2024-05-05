@@ -20,6 +20,8 @@ namespace Runtime.Managers
         public static LaserZombiePool Instance { get; private set; }
         private int ZOMBIE_POOL_SIZE = 100;
         private Queue<GameObject> laserZombieQueue = new Queue<GameObject>();
+        [SerializeField] private GameObject _laserZombie;
+
 
         public int CurrentZombieCount => laserZombieQueue.Count;
 
@@ -30,7 +32,7 @@ namespace Runtime.Managers
         {
             for (int i = 0; i < ZOMBIE_POOL_SIZE; i++)
             {
-                GameObject zombie = Instantiate(gameObject, Vector3.zero, Quaternion.identity);
+                GameObject zombie = Instantiate(_laserZombie, Vector3.zero, Quaternion.identity);
                 zombie.SetActive(false);
                 laserZombieQueue.Enqueue(zombie);
             }

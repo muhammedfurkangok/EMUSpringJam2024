@@ -6,6 +6,7 @@ namespace Runtime.Managers
     public class SpittingZombiePool : MonoBehaviour
     {
         public static SpittingZombiePool Instance { get; private set; }
+        [SerializeField] private GameObject _spitterZombie;
         private int ZOMBIE_POOL_SIZE = 100;
         private Queue<GameObject> spittingZombieQueue = new Queue<GameObject>();
 
@@ -32,7 +33,7 @@ namespace Runtime.Managers
         {
             for (int i = 0; i < ZOMBIE_POOL_SIZE; i++)
             {
-                GameObject zombie = Instantiate(gameObject, Vector3.zero, Quaternion.identity);
+                GameObject zombie = Instantiate(_spitterZombie, Vector3.zero, Quaternion.identity);
                 zombie.SetActive(false);
                 spittingZombieQueue.Enqueue(zombie);
             }

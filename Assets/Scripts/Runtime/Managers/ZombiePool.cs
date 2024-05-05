@@ -4,12 +4,16 @@ using UnityEngine;
 public class ZombiePool : MonoBehaviour
 {
     public static ZombiePool Instance { get; private set; }
+    [SerializeField] private GameObject _zombie;
     private int ZOMBIE_POOL_SIZE = 100;
     private Queue<GameObject> zombieQueue = new Queue<GameObject>();
 
     public int CurrentZombieCount => zombieQueue.Count;
 
-
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         CreateZombiePool();
@@ -21,7 +25,7 @@ public class ZombiePool : MonoBehaviour
     {
         for (int i = 0; i < ZOMBIE_POOL_SIZE; i++)
         {
-            GameObject zombie = Instantiate(gameObject, Vector3.zero, Quaternion.identity);
+            GameObject zombie = Instantiate(_zombie, Vector3.zero, Quaternion.identity);
             zombie.SetActive(false);
             zombieQueue.Enqueue(zombie);
         }
