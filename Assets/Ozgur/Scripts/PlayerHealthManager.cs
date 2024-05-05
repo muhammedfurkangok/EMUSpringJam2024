@@ -1,4 +1,3 @@
-using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
@@ -63,16 +62,17 @@ namespace Ozgur.Scripts
             var cts = new CancellationTokenSource();
             takeAnimationCancellationTokenSource = cts;
 
+            var rotationAxis = Vector3.Cross(hitDirection, Vector3.up).normalized;
             var animationIntensity = takeDamageAnimationIntensity * damage;
 
-            var rotation = Quaternion.AngleAxis(-animationIntensity, -hitDirection);
-            takeAnimationTween = transform.DORotateQuaternion(rotation, takeDamageAnimationDuration).SetEase(takeDamageAnimationEase).SetRelative();
+            var tiltForward = Quaternion.AngleAxis(animationIntensity, rotationAxis);
+            takeAnimationTween = transform.DORotateQuaternion(tiltForward, takeDamageAnimationDuration).SetEase(takeDamageAnimationEase).SetRelative();
             await takeAnimationTween.WithCancellation(cts.Token);
 
             if (cts.IsCancellationRequested) return;
 
-            rotation = Quaternion.AngleAxis(animationIntensity, -hitDirection);
-            takeAnimationTween = transform.DORotateQuaternion(rotation, takeDamageAnimationDuration).SetEase(takeDamageAnimationEase).SetRelative();
+            var tiltBackward = Quaternion.AngleAxis(-animationIntensity, rotationAxis);
+            takeAnimationTween = transform.DORotateQuaternion(tiltBackward, takeDamageAnimationDuration).SetEase(takeDamageAnimationEase).SetRelative();
             await takeAnimationTween.WithCancellation(cts.Token);
         }
 
