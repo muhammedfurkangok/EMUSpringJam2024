@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 566e7e7cb5461ec41a124ba76221151f
+  - enabled: 1
+    path: Assets/Egemen/egmScenes/MainMenu.unity
+    guid: 8874347a638e73f4cb0d240841668eb7
+  - enabled: 1
+    path: Assets/Scenes/Demo Arena 1.unity
+    guid: bc0b62adb427e8b4dab34337de4d935f
   m_configObjects: {}
