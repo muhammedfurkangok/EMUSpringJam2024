@@ -1,31 +1,26 @@
 using System;
 using System.Collections.Generic;
-using System.Data;
-using JetBrains.Annotations;
-using Mono.Data.Sqlite;
-using Unity.VisualScripting;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
+
 
 public static class DatabaseController
 {
     private static readonly string Path = Application.persistentDataPath + "/" + "userData.db";
-    private static readonly string Connection = "URI=file:" + Path;
-    private static readonly IDbConnection DbConnection = new SqliteConnection(Connection);
+    // private static readonly string Connection = "URI=file:" + Path;
+    private static readonly SQLiteConnection DbConnection = new SQLiteConnection(Path, SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create);
     
     public static void InitializeDatabase()
     {
-        DbConnection.Open();
-        IDbCommand dbCommand;
-        dbCommand = DbConnection.CreateCommand();
-        dbCommand.CommandText =
-            "CREATE TABLE IF NOT EXISTS scoreboard(" +
-            "    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
+        
+        string command = "CREATE TABLE IF NOT EXISTS scoreboard(" +
+            "   id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
             "    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL ," +
             "    score BIGINT," +
             "    `by` VARCHAR," +
             "    is_user BOOLEAN default true NOT NULL" +
             ");";
+        var dbCommand = DbConnection.CreateCommand(command);
         dbCommand.ExecuteNonQuery();
         var vals = new LeaderboardScore[]
         {
@@ -50,73 +45,51 @@ public static class DatabaseController
 
     public static void InsertLeaderboard(LeaderboardScore leaderboardScore)
     {
-        var command = DbConnection.CreateCommand();
+        var commandText = $"INSERT OR REPLACE INTO" +
+                          $" scoreboard" +
+                          $" (id, score, timestamp, `by`, is_user)" +
+                          $" VALUES " +
+                          $"(?, ?, ?, ?, ?);";
+        var command = DbConnection.CreateCommand(commandText, new object[] {leaderboardScore.Id, leaderboardScore.Score, leaderboardScore.Timestamp, leaderboardScore.By, leaderboardScore.IsUser});
+
         // Insert with id if it has one and insert with timestamp if it has one
-        command.CommandText = $"INSERT OR REPLACE INTO" +
-                              $" scoreboard" +
-                              $" (id, score, timestamp, `by`, is_user)" +
-                              $" VALUES " +
-                              $"($id, $score, $timestamp, $by, $isUser);";
-        command.Parameters.Add(
-            new SqliteParameter
-            {
-                ParameterName = "$id",
-                Value = leaderboardScore.Id
-            });
-        command.Parameters.Add(
-            new SqliteParameter
-            {
-                ParameterName = "$score",
-                Value = leaderboardScore.Score
-            });
-        command.Parameters.Add(
-            new SqliteParameter
-            {
-                ParameterName = "$timestamp",
-                Value = leaderboardScore.Timestamp
-            });
-        command.Parameters.Add(
-            new SqliteParameter
-            {
-                ParameterName = "$by",
-                Value = leaderboardScore.By
-            });
-        command.Parameters.Add(
-            new SqliteParameter
-            {
-                ParameterName = "$isUser",
-                Value = leaderboardScore.IsUser
-            }
-        );
         command.ExecuteNonQuery();
     }
     public static List<LeaderboardScore> GetLeaderboard()
     {
-        var command = DbConnection.CreateCommand();
-        command.CommandText = "SELECT score, timestamp, `by`, is_user, id   FROM scoreboard;";
-        var reader = command.ExecuteReader();
+        var commandText = "SELECT score, timestamp, `by`, is_user, id FROM scoreboard;";
+        var command = DbConnection.CreateCommand(commandText);
+        var scoreboardTables = command.ExecuteQuery<ScoreboardTable>();
         var leaderboardScores = new List<LeaderboardScore>();
-        while (reader.Read())
+        foreach (var row in scoreboardTables)
             leaderboardScores.Add(
                 new LeaderboardScore()
-                    .SetScore(int.Parse(reader[0].ToString()))
-                    .SetTimestamp(DateTime.Parse(reader[1].ToString()))
-                    .SetBy(reader[2].ToString())
-                    .SetIsUser(bool.Parse(reader[3].ToString()))
-                    .SetId(int.Parse(reader[4].ToString()))
+                    .SetScore(row.Score)
+                    .SetTimestamp(row.Timestamp)
+                    .SetBy(row.By)
+                    .SetIsUser(row.IsUser)
+                    .SetId(row.Id)
             );
         return leaderboardScores;
     }
 
     public static int GetHighScore()
     {
-        var command = DbConnection.CreateCommand();
-        command.CommandText = "SELECT score FROM scoreboard WHERE is_user = true ORDER BY score desc LIMIT 1";
-        var reader = command.ExecuteReader();
-        reader.Read();
-        if (reader.FieldCount == 0) return 0;
-        return (int)reader[0];
+        var commandText = "SELECT score FROM scoreboard WHERE is_user = true ORDER BY score desc LIMIT 1";
+        var command = DbConnection.CreateCommand(commandText);
+        var qRes = command.ExecuteQuery<ScoreboardTable>();
+        if (qRes.Count == 0) return 0;
+        return qRes[0].Score;
     }
+}
+
+public class ScoreboardTable
+{
+    public int Id { get; set; }
+    public int Score { get; set; }
+    public DateTime Timestamp { get; set; }
+    public string By { get; set; }
+    public bool IsUser { get; set; }
 }
 
 public class LeaderboardScore
