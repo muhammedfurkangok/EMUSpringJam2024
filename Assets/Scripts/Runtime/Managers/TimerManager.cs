@@ -3,6 +3,7 @@ using Runtime.Interfaces;
 using Runtime.Signals;
 using System;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Runtime.Managers
@@ -39,30 +40,37 @@ namespace Runtime.Managers
             elapsedTime = 0f;
             TimerSignals.Instance.OnTimerReset();
         }
+
+        private float lastEventTime = 0f;
+        private float eventInterval = 30f; // Interval in seconds for the events
         private void FireEvents()
         {
-            var result = elapsedTime % 30;
-            Debug.Log(result);
-            Debug.LogWarning((int)elapsedTime);
-            if ((int)elapsedTime % 30 == 0 && elapsedTime % 60 != 0 && elapsedTime % 300 != 0)
+            float currentTime = Time.time;
+            if (currentTime - lastEventTime >= eventInterval)
             {
-                TimerSignals.Instance.OnThirtySecondsPassed();
-                Debug.Log("30 seconds passed");
-            }
-            if ((int)elapsedTime % 60 == 0 && elapsedTime % 300 != 0)
-            {
-                TimerSignals.Instance.OnOneMinutePassed();
-                Debug.Log("60 seconds passed");
-            }
-            if ((int)elapsedTime % 299 == 0)
-            {
-                TimerSignals.Instance.OnFiveMinutesPassed();
-            }
-            if ((int)elapsedTime % 359 == 0)
-            {
-                TimerSignals.Instance.OnSixMinutesPassed();
+                lastEventTime = currentTime;
+
+                TimeSpan time = TimeSpan.FromSeconds(elapsedTime);
+                if (time.Seconds % 30 == 0 && time.Seconds % 60 != 0 && time.Seconds % 300 != 0)
+                {
+                    TimerSignals.Instance.OnThirtySecondsPassed();
+                }
+                if (time.Seconds % 60 == 0 && time.Seconds % 300 != 0)
+                {
+                    TimerSignals.Instance.OnOneMinutePassed();
+                    Debug.Log("60 seconds passed");
+                }
+                if (time.Seconds % 299 == 0)
+                {
+                    TimerSignals.Instance.OnFiveMinutesPassed();
+                }
+                if (time.Seconds % 359 == 0)
+                {
+                    TimerSignals.Instance.OnSixMinutesPassed();
+                }
             }
         }
+
         private void OnDestroy()
         {
             TimerSignals.Instance.OnSixMinutesPassed -= ResetTimer;

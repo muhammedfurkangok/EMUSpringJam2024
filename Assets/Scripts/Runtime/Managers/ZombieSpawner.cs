@@ -5,9 +5,9 @@ using UnityEngine;
 public class ZombieSpawner : MonoBehaviour
 {
 
-    public bool canSpawnZombies = false;
-    public bool canSpawnSpitters = false;
-    public bool canSpawnLasers = false;
+    public bool canSpawnZombies = true;
+    public bool canSpawnSpitters = true;
+    public bool canSpawnLasers = true;
 
     private Transform player;
 
@@ -52,7 +52,7 @@ public class ZombieSpawner : MonoBehaviour
             await UniTask.WaitForSeconds(1.5f);
             if (SpittingZombiePool.Instance.CurrentZombieCount >= 25)
             {
-                canSpawnZombies = false;
+                //canSpawnZombies = false;
             }
         }
     }
