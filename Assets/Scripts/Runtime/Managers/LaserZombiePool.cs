@@ -10,7 +10,6 @@ namespace Runtime.Managers
             if (Instance == null)
             {
                 Instance = this;
-                CreateZombiePool();
             }
             else
             {
@@ -24,6 +23,11 @@ namespace Runtime.Managers
 
 
         public int CurrentZombieCount => laserZombieQueue.Count;
+
+        private void Start()
+        {
+            CreateZombiePool();
+        }
 
 
         #region Object Pooling Methods
