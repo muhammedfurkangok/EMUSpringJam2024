@@ -44,7 +44,7 @@ public class Pistol : Gun
         //If the object hit has the IDamageable interface, it will take damage.
         if (hit.collider.TryGetComponent<IDamageable>(out IDamageable damageable))
         {
-            damageable.TakeDamage((int)_damage);
+            damageable.TakeDamage((int)_damage, transform.forward);
         }
 
         Debug.Log(damageable);

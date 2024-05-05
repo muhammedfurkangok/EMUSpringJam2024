@@ -63,7 +63,7 @@ public class PlayerManager : MonoBehaviour,IDamageable
         playerRb.velocity = new Vector3(horizontal * speed, playerRb.velocity.y, vertical * speed);
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Vector3 hitDirection)
     {
         currentHealth -= damage;
         UpdateHealthBar();

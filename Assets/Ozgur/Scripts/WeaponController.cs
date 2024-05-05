@@ -1,11 +1,10 @@
-using System;
 using System.Collections.Generic;
 using Ozgur.Scripts.WeaponScripts;
 using UnityEngine;
 
 namespace Ozgur.Scripts
 {
-    public class WeaponManager : MonoBehaviour
+    public class WeaponController : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private List<WeaponBase> weapons;
@@ -23,6 +22,16 @@ namespace Ozgur.Scripts
             else if (Input.GetKeyDown(KeyCode.Alpha2)) ChangeWeaponIndex(1);
             else if (Input.GetKeyDown(KeyCode.Alpha3)) ChangeWeaponIndex(2);
             else if (Input.GetKeyDown(KeyCode.Alpha4)) ChangeWeaponIndex(3);
+
+            if (currentWeapon.IsAutomatic())
+            {
+                if (Input.GetMouseButton(0)) currentWeapon.ShootBase();
+            }
+
+            else
+            {
+                if (Input.GetMouseButtonDown(0)) currentWeapon.ShootBase();
+            }
         }
 
         private void ChangeWeaponNextPrevious(bool isNext)
@@ -39,10 +48,10 @@ namespace Ozgur.Scripts
         {
             if (index < 0 || index >= weapons.Count) return;
 
-            currentWeapon.gameObject.SetActive(false);
+            foreach (var meshRenderer in currentWeapon.meshRenderers) meshRenderer.enabled = false;
             currentWeaponIndex = index;
             currentWeapon = weapons[currentWeaponIndex];
-            currentWeapon.gameObject.SetActive(true);
+            foreach (var meshRenderer in currentWeapon.meshRenderers) meshRenderer.enabled = true;
         }
     }
 }
