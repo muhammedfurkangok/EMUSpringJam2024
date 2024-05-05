@@ -22,12 +22,6 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
 
     
     private bool isAttacking = false;
-
-    private async void Awake()
-    {
-       await UniTask.Yield();
-        TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
-    }
     private void OnDestroy()
     {
         TimerSignals.Instance.OnThirtySecondsPassed -= () => LevelUpZombie(1);
@@ -35,6 +29,7 @@ public class ZombieManager : MonoBehaviour, IZombie, IDamageable
     private void Start()
     {
         target = Player.Instance.transform;
+        TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
     }
     public void LevelUpZombie(uint levelMultiplier)
     {

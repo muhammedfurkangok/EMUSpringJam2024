@@ -39,9 +39,10 @@ namespace Runtime.Managers
 
         private void Start()
         {
-            TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
 
             target = Player.Instance.transform;
+            TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
+
         }
 
         private void Update()

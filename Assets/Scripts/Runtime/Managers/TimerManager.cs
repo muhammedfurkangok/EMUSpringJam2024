@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using Runtime.Interfaces;
 using Runtime.Signals;
 using System;
@@ -22,13 +23,14 @@ namespace Runtime.Managers
             UpdateTimer();
         }
 
-        private void UpdateTimer()
+        private async void UpdateTimer()
         {
             elapsedTime += Time.deltaTime;
             TimeSpan time = TimeSpan.FromSeconds(elapsedTime);
 
             string timerString = string.Format("{0:00}:{1:00}", (int)time.TotalMinutes, time.Seconds);
             timerText.text = timerString;
+            await UniTask.WaitForSeconds(1f);
             FireEvents();
         }
         private void ResetTimer()
@@ -39,7 +41,8 @@ namespace Runtime.Managers
         }
         private void FireEvents()
         {
-            Debug.Log((int)elapsedTime % 30);
+            var result = elapsedTime % 30;
+            Debug.Log(result);
             Debug.LogWarning((int)elapsedTime);
             if ((int)elapsedTime % 30 == 0 && elapsedTime % 60 != 0 && elapsedTime % 300 != 0)
             {

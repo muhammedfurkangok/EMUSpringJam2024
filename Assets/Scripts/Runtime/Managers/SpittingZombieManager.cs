@@ -25,10 +25,6 @@ namespace Runtime.Managers
 
 
         private bool isAttacking = false;
-        private void OnEnable()
-        {
-            TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
-        }
         private void OnDestroy()
         {
             TimerSignals.Instance.OnThirtySecondsPassed -= () => LevelUpZombie(1);
@@ -36,6 +32,7 @@ namespace Runtime.Managers
         private void Start()
         {
             target = Player.Instance.transform;
+            TimerSignals.Instance.OnThirtySecondsPassed += () => LevelUpZombie(1);
         }
         public void LevelUpZombie(uint levelMultiplier)
         {
